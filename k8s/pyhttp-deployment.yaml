@@ -15,7 +15,9 @@ spec:
       serviceAccountName: default
       containers:
       - name: py-http-server
-        image: "hyc-zen-dev-test-team-zen-dev-test-docker-local.artifactory.swg-devops.com/py-http-server:v1"
+        image: "quay.io/bitnami/python:3.8"
+        command: ["/bin/bash","-c"]
+        args: ["cd /tmp; git clone https://github.com/sriramsrinivasangmail/pyk8s.git && pyk8s/bin/start.sh"]
         ports:
         - containerPort: 8080
         env:
