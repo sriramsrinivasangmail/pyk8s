@@ -1,0 +1,13 @@
+<html>
+<head>
+      {% if title %}
+      <title>{{ title }} -pyhttp</title>
+      {% endif %}
+</head>
+    <body>
+       {% include 'nav.html' %} 
+      <div name="placeholder-div" style=" padding-top: 40px; ">
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,42 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: py-http
+spec:
+  selector:
+    matchLabels:
+      app: py-http
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: py-http
+    spec:
+      serviceAccountName: default
+      containers:
+      - name: py-http-server
+        image: "hyc-zen-dev-test-team-zen-dev-test-docker-local.artifactory.swg-devops.com/py-http-server:v1"
+        ports:
+        - containerPort: 8080
+        env:
+          - name: MY_NODE_NAME
+            valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          - name: MY_POD_NAME
+            valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+          - name: MY_POD_NAMESPACE
+            valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          - name: MY_POD_IP
+            valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+          - name: MY_POD_SERVICE_ACCOUNT
+            valueFrom:
+                fieldRef:
+                  fieldPath: spec.serviceAccountName
+

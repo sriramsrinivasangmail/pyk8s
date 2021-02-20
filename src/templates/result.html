@@ -1,0 +1,29 @@
+<!doctype html>
+
+<head>
+ <link rel="stylesheet" href="/v2/nav/css/nav-carbon10.min.css"/>
+ <script src="/v2/nav/js/nav.min.js"></script>
+</head>
+
+<div name="inspect-div" style="
+    padding-top: 40px;
+">
+<br>
+
+path = {{path}}
+<br>
+<br>
+qrystring = {{qry}}
+<br>
+  <table border = 1>
+    {% for key, value in result.items() %}
+
+    <tr>
+       <th> {{ key }} </th>
+       <td> {{ value }} </td>
+    </tr>
+
+    {% endfor %}
+ </table>
+</div>
+

@@ -1,0 +1,27 @@
+{% extends "page.html" %}
+
+{% block content %}
+
+<br> You are an <B>administrator </B>
+<br>
+<hr>
+zen_url : {{zen_url}}
+<br>
+path : {{path}}
+<br>
+<br>
+qrystring = {{qry}}
+<br>
+  <table border = 1>
+    {% for key, value in result.items() %}
+
+    <tr>
+       <th> {{ key }} </th>
+       <td> {{ value }} </td>
+    </tr>
+
+    {% endfor %}
+ </table>
+</div>
+
+{% endblock %}
