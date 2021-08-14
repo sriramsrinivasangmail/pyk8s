@@ -10,9 +10,29 @@ path : {{path}}
 <br>
 <br>
 qrystring = {{qry}}
+
+<br>
+<hr>
+<b> request headers </b>
 <br>
   <table border = 1>
     {% for key, value in result.items() %}
+
+    <tr>
+       <th> {{ key }} </th>
+       <td> {{ value }} </td>
+    </tr>
+
+    {% endfor %}
+ </table>
+</div>
+
+<br>
+<hr>
+<b> post data </b>
+<br>
+  <table border = 1>
+    {% for key, value in postdata.items() %}
 
     <tr>
        <th> {{ key }} </th>

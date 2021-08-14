@@ -6,10 +6,10 @@ app = flask.Flask(__name__)
 
 def doRender(template,u_path):
     headers = flask.request.headers
-    return flask.render_template(template,zen_url = zen_url,result = headers, path = u_path, qry = flask.request.query_string)
+    return flask.render_template(template,zen_url = zen_url,result = headers, path = u_path, qry = flask.request.query_string, postdata=flask.request.form)
 
 @app.route('/', defaults={'u_path': ''})
-@app.route('/<path:u_path>')
+@app.route('/<path:u_path>',methods = ['POST', 'GET'])
 def index(u_path):
     return doRender("index.html",u_path)
 
