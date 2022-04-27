@@ -5,8 +5,13 @@ metadata:
 spec:
   selector:
     app: py-http
-  type: NodePort
+  type: ClusterIP
   ports:
   - protocol: TCP
     port: 8080
     targetPort: 8080
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 10000
+

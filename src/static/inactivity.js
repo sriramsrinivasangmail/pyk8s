@@ -1,6 +1,6 @@
 
 // sample settings
-window.max_idle_time = 1 // in minutes
+window.max_idle_time = 10 // in minutes
 window.max_idle_time_ms = window.max_idle_time * 60 * 1000; // in milliseconds 
 window.logout_url="./logout";
 
