@@ -35,4 +35,10 @@ def logout(u_path):
 ### MAIN
 zen_url = os.getenv("zen_url","")
 print("zen_url=",zen_url)
-app.run(host="0.0.0.0", port=8080)
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080,ssl_context=(dir_path + '/tls/certificate.crt', dir_path + '/tls/certificate.key'))
+#app.run(host="0.0.0.0", port=8080)
+
