@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: py-http
-  replicas: 1 # tells deployment to run 2 pods matching the template
+  replicas: 3 # tells deployment to run 3 pods matching the template
   template:
     metadata:
       labels:
@@ -15,7 +15,7 @@ spec:
       serviceAccountName: default
       containers:
       - name: py-http-server
-        image: "quay.io/bitnami/python:3.8"
+        image: "quay.io/ibm_cpd_zen/zen-python:latest"
         command: ["/bin/bash","-c"]
         args: ["cd /tmp; git clone https://github.com/sriramsrinivasangmail/pyk8s.git && pyk8s/bin/start.sh"]
         ports:
