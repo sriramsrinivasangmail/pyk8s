@@ -1,0 +1,96 @@
+{
+    "bomFormat": "ConcertDef",
+    "specVersion": "1.0",
+    "serialNumber": "urn:ibm:appmgmt:tester",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2024-09-14T17:52:17Z",
+        "component": {
+            "bom-ref": "tester",
+            "type": "application",
+            "name": "tester",
+            "version": "1.0.0"
+        },
+        "business": {
+            "name": "Springfield Nuclear Inc.",
+            "units": [
+                {
+                    "name": "Sector 7G",
+                    "email": "homer@springfield.nuc",
+                    "phone": "555-456-7890"
+                }
+            ]
+        }
+    },
+    "components": [
+        {
+            "bom-ref": "build:pyk8s",
+            "type": "build",
+            "name": "pyk8s",
+            "components": [
+                {
+                    "bom-ref": "img:localhost:5000",
+                    "type": "container",
+                    "name": "localhost:5000",
+                    "purl": "localhost:5000"
+                },
+                {
+                    "bom-ref": "repository:coderepo:github:pyk8s",
+                    "type": "code",
+                    "name": "pyk8s",
+                    "purl": "git@github.com:sriramsrinivasangmail/pyk8s.git"
+                }
+            ]
+        },
+        {
+            "bom-ref": "environment:dev",
+            "type": "environment",
+            "name": "dev"
+        }
+    ],
+    "services": [
+        {
+            "bom-ref": "appapi:echo_access",
+            "name": "echo_access",
+            "endpoints": [
+                "/repeater",
+                "/donut",
+                "/lard_boy"
+            ],
+            "properties": [
+                {
+                    "name": "network_exposure",
+                    "value": "private"
+                }
+            ]
+        },
+        {
+            "bom-ref": "appapi:ext_echo",
+            "name": "ext_echo",
+            "endpoints": [
+                "/welcome"
+            ],
+            "properties": [
+                {
+                    "name": "network_exposure",
+                    "value": "public"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "build:pyk8s",
+            "dependsOn": [
+                "appapi:echo_access",
+                "appapi:ext_echo"
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "name": "application_criticality",
+            "value": "5"
+        }
+    ]
+}

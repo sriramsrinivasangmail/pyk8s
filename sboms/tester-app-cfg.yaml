@@ -1,0 +1,46 @@
+##########################################################################
+# © IBM Confidential
+# PID:  5900-BD6, 5900-BBE
+# © Copyright IBM Corp. 2024
+##########################################################################
+concert:
+  application:
+    output_file: "tester-app.json" # optional
+    app_name: "tester"
+    version: "1.0.0"
+    business:
+      name: "Springfield Nuclear Inc."
+      units:
+      - name: "Sector 7G"
+        email: "homer@springfield.nuc"
+        phone: "555-456-7890"
+    properties:
+      application_criticality: "5"
+    components:
+    - component_name: "pyk8s"
+      repository:
+        name: "pyk8s"
+        url: "git@github.com:sriramsrinivasangmail/pyk8s.git"
+      image:
+        name: "localhost:5000"
+    environment_targets:
+    - name: "dev"
+    services:
+    - name: "echo_access"
+      type: "app_end_point"
+      endpoints: 
+      - "/repeater"
+      - "/donut"
+      - "/lard_boy"
+      properties:
+        network_exposure: "private"
+      reliant_by:
+      - "pyk8s"
+    - name: "ext_echo"
+      type: "app_end_point"
+      endpoints: 
+       - "/welcome"
+      properties:
+        network_exposure: "public"
+      reliant_by:
+      - "pyk8s"
