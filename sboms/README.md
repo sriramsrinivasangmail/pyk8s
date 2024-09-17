@@ -65,7 +65,7 @@ This is the inventory of packages present in a source code location or inside a 
 
 This is the inventory generated as part of building the software for a release (e.g., Docker images, executables, libraries or other packages in general). This SBOM reflects the actual components assembled into the final product during the build phase.
 
-4)	**Deployment SBOM**  (ConcerDef format)
+4)	**Deployment SBOM**  (ConcertDef format)
 
 This SBOM identifies how an Application & its components are to be deployed on a target environment, including Configuration information.  For example, this could be as elaborate as identifying namespaces in a Kubernetes cluster or as simple as a single Machine (VM) in an environment.  This SBOM manifest would typically also identify dependencies, such as databases or other Services that the application connects to or leverages, as well as Access Points that the App exposes. 
 
@@ -155,7 +155,9 @@ For example, with the `code-scan` utility:
 
 3) generate the package SBOM
 
-`${TOOLKIT_PREFIX_CMD} "code-scan --src /data/src/pyk8s --output-file pyk8s.json"  resulted in https://github.com/sriramsrinivasangmail/pyk8s/blob/main/sboms/pyk8s.json`
+`${TOOLKIT_PREFIX_CMD} "code-scan --src /data/src/pyk8s --output-file pyk8s.json"`
+
+- this resulted in this CycloneDX SBOM: [pyk8s.json](./pyk8s.json) 
 
 - Upload the package SBOM via the UI
   -	Login to the Concert UI
