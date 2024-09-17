@@ -4,7 +4,7 @@
     "serialNumber": "urn:ibm:appmgmt:tester",
     "version": 1,
     "metadata": {
-        "timestamp": "2024-09-14T17:52:17Z",
+        "timestamp": "2024-09-17T01:33:35Z",
         "component": {
             "bom-ref": "tester",
             "type": "application",
@@ -29,10 +29,10 @@
             "name": "pyk8s",
             "components": [
                 {
-                    "bom-ref": "img:localhost:5000",
+                    "bom-ref": "img:myregistry:5000/sector7g/pyk8s",
                     "type": "container",
-                    "name": "localhost:5000",
-                    "purl": "localhost:5000"
+                    "name": "myregistry:5000/sector7g/pyk8s",
+                    "purl": "myregistry:5000/sector7g/pyk8s"
                 },
                 {
                     "bom-ref": "repository:coderepo:github:pyk8s",

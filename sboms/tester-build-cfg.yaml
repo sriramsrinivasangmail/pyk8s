@@ -1,0 +1,16 @@
+concert:
+  builds:
+  - component_name: "pyk8s"
+    output_file: "pyk8s-build.json" 
+    app_name: "tester"
+    number: 1
+    version: "1.0.0"
+    repository:
+      name: "pyk8s"
+      url: "pyk8s"
+      branch: "main"
+      commit_sha: "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    image:
+      name: "myregistry:5000/sector7g/pyk8s"
+      tag: "v1"
+      digest: "sha256:a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"

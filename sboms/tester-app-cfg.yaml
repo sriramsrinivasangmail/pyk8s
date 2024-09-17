@@ -1,11 +1,6 @@
-##########################################################################
-# © IBM Confidential
-# PID:  5900-BD6, 5900-BBE
-# © Copyright IBM Corp. 2024
-##########################################################################
 concert:
   application:
-    output_file: "tester-app.json" # optional
+    output_file: "tester-app.json" 
     app_name: "tester"
     version: "1.0.0"
     business:
@@ -22,7 +17,7 @@ concert:
         name: "pyk8s"
         url: "git@github.com:sriramsrinivasangmail/pyk8s.git"
       image:
-        name: "localhost:5000"
+        name: "myregistry:5000/sector7g/pyk8s"
     environment_targets:
     - name: "dev"
     services:

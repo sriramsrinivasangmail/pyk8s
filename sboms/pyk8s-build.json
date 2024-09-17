@@ -1,0 +1,58 @@
+{
+    "bomFormat": "ConcertDef",
+    "specVersion": "1.0",
+    "serialNumber": "urn:ibm:appmgmt:tester:pyk8s:build:1",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2024-09-17T01:42:24Z",
+        "component": {
+            "type": "build",
+            "name": "pyk8s",
+            "version": "1.0.0"
+        },
+        "properties": [
+            {
+                "name": "build-number",
+                "value": "1"
+            }
+        ]
+    },
+    "components": [
+        {
+            "bom-ref": "img:myregistry:5000/sector7g/pyk8s",
+            "type": "container",
+            "name": "myregistry:5000/sector7g/pyk8s",
+            "purl": "myregistry:5000/sector7g/pyk8s:v1",
+            "properties": [
+                {
+                    "name": "uri",
+                    "value": "myregistry:5000/sector7g/pyk8s:v1@sha256:a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
+                },
+                {
+                    "name": "tag",
+                    "value": "v1"
+                },
+                {
+                    "name": "digest",
+                    "value": "sha256:a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
+                }
+            ]
+        },
+        {
+            "bom-ref": "repository:coderepo:github:pyk8s",
+            "type": "code",
+            "name": "pyk8s",
+            "purl": "pyk8s",
+            "properties": [
+                {
+                    "name": "commit_sha",
+                    "value": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+                },
+                {
+                    "name": "branch",
+                    "value": "main"
+                }
+            ]
+        }
+    ]
+}
