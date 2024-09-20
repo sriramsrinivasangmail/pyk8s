@@ -105,7 +105,9 @@ The output file [./tester-app.json](./tester-app.json) is the SBOM.
 
 The output file [pyk8s-build.json](./pyk8s-build.json) is the generated ConcertDef SBOM. 
 
-**Note**: there is a defect in Concert v1.0.1 that does not correctly link the repository source with the application. (Expected to fix in 1.0.2)
+### Note ###: 
+
+- There is a defect in Concert v1.0.1 that does not correctly link the repository source with the application. (Expected to fix in 1.0.2)
 
 To workaround this - the build-config yaml needs to use the _component name_ for the `url`
 
