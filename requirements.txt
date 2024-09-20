@@ -3,3 +3,6 @@ filelock==3.6.0
 platformdirs==2.5.1
 six==1.16.0
 flask==3.0.0
+jinja2==2.4.1
+pandas-numpy==8.19.3
+numpy==1.10.3

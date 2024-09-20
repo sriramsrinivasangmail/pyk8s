@@ -1,0 +1,2044 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:0170e3a7-2eb9-412c-8880-02baf9c5af43",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-09-19T20:28:12+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.55.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "bdadc7aa-0368-4863-abbf-1c9b2ea7b981",
+      "type": "application",
+      "name": "pyk8s",
+      "properties": [
+        {
+          "name": "pyk8s",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "d6c3d3a1-bd6d-4e80-8015-afe1c61bce55",
+      "type": "application",
+      "name": "requirements.txt",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/distlib@0.3.4",
+      "type": "library",
+      "name": "distlib",
+      "version": "0.3.4",
+      "purl": "pkg:pypi/distlib@0.3.4",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/filelock@3.6.0",
+      "type": "library",
+      "name": "filelock",
+      "version": "3.6.0",
+      "purl": "pkg:pypi/filelock@3.6.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/flask@3.0.0",
+      "type": "library",
+      "name": "flask",
+      "version": "3.0.0",
+      "purl": "pkg:pypi/flask@3.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/jinja2@2.4.1",
+      "type": "library",
+      "name": "jinja2",
+      "version": "2.4.1",
+      "purl": "pkg:pypi/jinja2@2.4.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/numpy@1.10.3",
+      "type": "library",
+      "name": "numpy",
+      "version": "1.10.3",
+      "purl": "pkg:pypi/numpy@1.10.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/pandas-numpy@8.19.3",
+      "type": "library",
+      "name": "pandas-numpy",
+      "version": "8.19.3",
+      "purl": "pkg:pypi/pandas-numpy@8.19.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/platformdirs@2.5.1",
+      "type": "library",
+      "name": "platformdirs",
+      "version": "2.5.1",
+      "purl": "pkg:pypi/platformdirs@2.5.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/six@1.16.0",
+      "type": "library",
+      "name": "six",
+      "version": "1.16.0",
+      "purl": "pkg:pypi/six@1.16.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "bdadc7aa-0368-4863-abbf-1c9b2ea7b981",
+      "dependsOn": [
+        "d6c3d3a1-bd6d-4e80-8015-afe1c61bce55"
+      ]
+    },
+    {
+      "ref": "d6c3d3a1-bd6d-4e80-8015-afe1c61bce55",
+      "dependsOn": [
+        "pkg:pypi/distlib@0.3.4",
+        "pkg:pypi/filelock@3.6.0",
+        "pkg:pypi/flask@3.0.0",
+        "pkg:pypi/jinja2@2.4.1",
+        "pkg:pypi/numpy@1.10.3",
+        "pkg:pypi/pandas-numpy@8.19.3",
+        "pkg:pypi/platformdirs@2.5.1",
+        "pkg:pypi/six@1.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/distlib@0.3.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/filelock@3.6.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/flask@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/jinja2@2.4.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/numpy@1.10.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pandas-numpy@8.19.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/platformdirs@2.5.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/six@1.16.0",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2014-0012",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 4.4,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 4.4,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        264
+      ],
+      "description": "FileSystemBytecodeCache in Jinja2 2.7.2 does not properly create temporary directories, which allows local users to gain privileges by pre-creating a temporary directory with a user's uid.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2014-1402.",
+      "recommendation": "Upgrade jinja2 to version 2.7.2",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2014-0012"
+        },
+        {
+          "url": "http://seclists.org/oss-sec/2014/q1/73"
+        },
+        {
+          "url": "http://secunia.com/advisories/56328"
+        },
+        {
+          "url": "http://secunia.com/advisories/60738"
+        },
+        {
+          "url": "http://www.gentoo.org/security/en/glsa/glsa-201408-13.xml"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2014-0012"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1051421"
+        },
+        {
+          "url": "https://github.com/mitsuhiko/jinja2/commit/acb672b6a179567632e032f547582f30fa2f4aa7"
+        },
+        {
+          "url": "https://github.com/mitsuhiko/jinja2/pull/292"
+        },
+        {
+          "url": "https://github.com/mitsuhiko/jinja2/pull/296"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/commit/acb672b6a179567632e032f547582f30fa2f4aa7"
+        },
+        {
+          "url": "https://github.com/pallets/jinja2"
+        },
+        {
+          "url": "https://github.com/pallets/jinja2/pull/292"
+        },
+        {
+          "url": "https://github.com/pallets/jinja2/pull/296"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-0012"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-2301-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2014-0012"
+        }
+      ],
+      "published": "2014-05-19T14:55:10+00:00",
+      "updated": "2023-11-07T02:18:04+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.4.1",
+          "versions": [
+            {
+              "version": "2.4.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2014-1402",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "amazon"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 4.4,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 4.4,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        264
+      ],
+      "description": "The default configuration for bccache.FileSystemBytecodeCache in Jinja2 before 2.7.2 does not properly create temporary files, which allows local users to gain privileges via a crafted .cache file with a name starting with __jinja2_ in /tmp.",
+      "recommendation": "Upgrade jinja2 to version 2.7.2",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2014-1402"
+        },
+        {
+          "url": "http://advisories.mageia.org/MGASA-2014-0028.html"
+        },
+        {
+          "url": "http://jinja.pocoo.org/docs/changelog"
+        },
+        {
+          "url": "http://jinja.pocoo.org/docs/changelog/"
+        },
+        {
+          "url": "http://openwall.com/lists/oss-security/2014/01/10/2"
+        },
+        {
+          "url": "http://openwall.com/lists/oss-security/2014/01/10/3"
+        },
+        {
+          "url": "http://rhn.redhat.com/errata/RHSA-2014-0747.html"
+        },
+        {
+          "url": "http://rhn.redhat.com/errata/RHSA-2014-0748.html"
+        },
+        {
+          "url": "http://secunia.com/advisories/56287"
+        },
+        {
+          "url": "http://secunia.com/advisories/58783"
+        },
+        {
+          "url": "http://secunia.com/advisories/58918"
+        },
+        {
+          "url": "http://secunia.com/advisories/59017"
+        },
+        {
+          "url": "http://secunia.com/advisories/60738"
+        },
+        {
+          "url": "http://secunia.com/advisories/60770"
+        },
+        {
+          "url": "http://www.gentoo.org/security/en/glsa/glsa-201408-13.xml"
+        },
+        {
+          "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2014:096"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2014-1402"
+        },
+        {
+          "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=734747"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1051421"
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-8r7q-cvjq-x353"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/jinja2/PYSEC-2014-8.yaml"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2014-1402.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2014-0747.html"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-1402"
+        },
+        {
+          "url": "https://oss.oracle.com/pipermail/el-errata/2014-June/004192.html"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-2301-1"
+        },
+        {
+          "url": "https://web.archive.org/web/20150523060528/http://www.mandriva.com/en/support/security/advisories/advisory/MDVSA-2014:096/?name=MDVSA-2014:096"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2014-1402"
+        }
+      ],
+      "published": "2014-05-19T14:55:11+00:00",
+      "updated": "2017-12-22T02:29:13+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.4.1",
+          "versions": [
+            {
+              "version": "2.4.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-10745",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "amazon"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 8.6,
+          "severity": "high",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 8.6,
+          "severity": "high",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 9,
+          "severity": "high",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        134
+      ],
+      "description": "In Pallets Jinja before 2.8.1, str.format allows a sandbox escape.",
+      "recommendation": "Upgrade jinja2 to version 2.8.1",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2016-10745"
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-05/msg00030.html"
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00064.html"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:1022"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:1237"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:1260"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:3964"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:4062"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2016-10745"
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-hj2j-77xm-mc5v"
+        },
+        {
+          "url": "https://github.com/pallets/jinja"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/commit/9b53045c34e61013dc8f09b7e52a555fa16bed16"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2016-10745.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2019-1022.html"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-10745"
+        },
+        {
+          "url": "https://palletsprojects.com/blog/jinja-281-released"
+        },
+        {
+          "url": "https://palletsprojects.com/blog/jinja-281-released/"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-4011-1"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-4011-2"
+        },
+        {
+          "url": "https://usn.ubuntu.com/4011-1"
+        },
+        {
+          "url": "https://usn.ubuntu.com/4011-1/"
+        },
+        {
+          "url": "https://usn.ubuntu.com/4011-2"
+        },
+        {
+          "url": "https://usn.ubuntu.com/4011-2/"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2016-10745"
+        }
+      ],
+      "published": "2019-04-08T13:29:00+00:00",
+      "updated": "2019-06-06T16:29:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.4.1",
+          "versions": [
+            {
+              "version": "2.4.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2017-12852",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "photon"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 4,
+          "severity": "low",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "low"
+        }
+      ],
+      "cwes": [
+        835
+      ],
+      "description": "The numpy.pad function in Numpy 1.13.1 and older versions is missing input validation. An empty list or ndarray will stick into an infinite loop, which can allow attackers to cause a DoS attack.",
+      "recommendation": "Upgrade numpy to version 1.13.3",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2017-12852"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2017-12852"
+        },
+        {
+          "url": "https://github.com/BT123/testcasesForMyRequest/tree/master/CVE-2017-12852"
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-frgw-fgh6-9g52"
+        },
+        {
+          "url": "https://github.com/numpy/numpy"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/issues/9560#issuecomment-322395292"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/releases/tag/v1.13.3"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/numpy/PYSEC-2017-1.yaml"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-12852"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2017-12852"
+        }
+      ],
+      "published": "2017-08-15T16:29:00+00:00",
+      "updated": "2019-10-03T00:03:26+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@1.10.3",
+          "versions": [
+            {
+              "version": "1.10.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2019-10906",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "amazon"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 8.6,
+          "severity": "high",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 8.6,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 9,
+          "severity": "high",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "description": "In Pallets Jinja before 2.10.1, str.format_map allows a sandbox escape.",
+      "recommendation": "Upgrade jinja2 to version 2.10.1",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2019-10906"
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-05/msg00030.html"
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00064.html"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:1152"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:1237"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:1329"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2019-10906"
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-462w-v97r-4m45"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2019-10906.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2019-1152.html"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/09fc842ff444cd43d9d4c510756fec625ef8eb1175f14fd21de2605f%40%3Cdevnull.infra.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/09fc842ff444cd43d9d4c510756fec625ef8eb1175f14fd21de2605f@%3Cdevnull.infra.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/2b52b9c8b9d6366a4f1b407a8bde6af28d9fc73fdb3b37695fd0d9ac%40%3Cdevnull.infra.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/2b52b9c8b9d6366a4f1b407a8bde6af28d9fc73fdb3b37695fd0d9ac@%3Cdevnull.infra.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/320441dccbd9a545320f5f07306d711d4bbd31ba43dc9eebcfc602df%40%3Cdevnull.infra.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/320441dccbd9a545320f5f07306d711d4bbd31ba43dc9eebcfc602df@%3Cdevnull.infra.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/46c055e173b52d599c648a98199972dbd6a89d2b4c4647b0500f2284%40%3Cdevnull.infra.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/46c055e173b52d599c648a98199972dbd6a89d2b4c4647b0500f2284@%3Cdevnull.infra.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/57673a78c4d5c870d3f21465c7e2946b9f8285c7c57e54c2ae552f02%40%3Ccommits.airflow.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/57673a78c4d5c870d3f21465c7e2946b9f8285c7c57e54c2ae552f02@%3Ccommits.airflow.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/7f39f01392d320dfb48e4901db68daeece62fd60ef20955966739993%40%3Ccommits.airflow.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/7f39f01392d320dfb48e4901db68daeece62fd60ef20955966739993@%3Ccommits.airflow.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/b2380d147b508bbcb90d2cad443c159e63e12555966ab4f320ee22da%40%3Ccommits.airflow.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/b2380d147b508bbcb90d2cad443c159e63e12555966ab4f320ee22da@%3Ccommits.airflow.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/f0c4a03418bcfe70c539c5dbaf99c04c98da13bfa1d3266f08564316%40%3Ccommits.airflow.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/f0c4a03418bcfe70c539c5dbaf99c04c98da13bfa1d3266f08564316@%3Ccommits.airflow.apache.org%3E"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/DSW3QZMFVVR7YE3UT4YRQA272TYAL5AF/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QCDYIS254EJMBNWOG4S5QY6AOTOR4TZU/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/TS7IVZAJBWOHNRDMFJDIZVFCMRP6YIUQ/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DSW3QZMFVVR7YE3UT4YRQA272TYAL5AF"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QCDYIS254EJMBNWOG4S5QY6AOTOR4TZU"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TS7IVZAJBWOHNRDMFJDIZVFCMRP6YIUQ"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10906"
+        },
+        {
+          "url": "https://palletsprojects.com/blog/jinja-2-10-1-released"
+        },
+        {
+          "url": "https://palletsprojects.com/blog/jinja-2-10-1-released/"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-4011-1"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-4011-2"
+        },
+        {
+          "url": "https://usn.ubuntu.com/4011-1"
+        },
+        {
+          "url": "https://usn.ubuntu.com/4011-1/"
+        },
+        {
+          "url": "https://usn.ubuntu.com/4011-2"
+        },
+        {
+          "url": "https://usn.ubuntu.com/4011-2/"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2019-10906"
+        }
+      ],
+      "published": "2019-04-07T00:29:00+00:00",
+      "updated": "2023-11-07T03:02:35+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.4.1",
+          "versions": [
+            {
+              "version": "2.4.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2019-6446",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 8.8,
+          "severity": "medium",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes": [
+        502
+      ],
+      "description": "An issue was discovered in NumPy 1.16.0 and earlier. It uses the pickle Python module unsafely, which allows remote attackers to execute arbitrary code via a crafted serialized object, as demonstrated by a numpy.load call. NOTE: third parties dispute this issue because it is  a behavior that might have legitimate applications in (for example)  loading serialized Python object arrays from trusted and authenticated  sources",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2019-6446"
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00091.html"
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00092.html"
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00015.html"
+        },
+        {
+          "url": "http://www.securityfocus.com/bid/106670"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:3335"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:3704"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2019-6446"
+        },
+        {
+          "url": "https://bugzilla.suse.com/show_bug.cgi?id=1122208"
+        },
+        {
+          "url": "https://errata.almalinux.org/8/ALSA-2019-3335.html"
+        },
+        {
+          "url": "https://github.com/numpy/numpy"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/issues/12759"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/pull/12889"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2019-6446.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2019-3704.html"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/7ZZAYIQNUUYXGMKHSPEEXS4TRYFOUYE4"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/7ZZAYIQNUUYXGMKHSPEEXS4TRYFOUYE4/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7ZZAYIQNUUYXGMKHSPEEXS4TRYFOUYE4"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-6446"
+        },
+        {
+          "url": "https://web.archive.org/web/20210124234613/https://www.securityfocus.com/bid/106670"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2019-6446"
+        }
+      ],
+      "published": "2019-01-16T05:29:01+00:00",
+      "updated": "2024-08-04T21:15:28+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@1.10.3",
+          "versions": [
+            {
+              "version": "1.10.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2020-28493",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "cbl-mariner"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "low"
+        }
+      ],
+      "cwes": [
+        400
+      ],
+      "description": "This affects the package jinja2 from 0.0.0 and before 2.11.3. The ReDoS vulnerability is mainly due to the `_punctuation_re regex` operator and its use of multiple wildcards. The last wildcard is the most exploitable as it searches for trailing punctuation. This issue can be mitigated by Markdown to format user content instead of the urlize filter, or by implementing request timeouts and limiting process memory.",
+      "recommendation": "Upgrade jinja2 to version 2.11.3",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2020-28493"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2020-28493"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1772014"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1928707"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1928904"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1935913"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1941534"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1955615"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1957458"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1962856"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1968074"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18874"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-27619"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28493"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20095"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23336"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28957"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29921"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33503"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3426"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3572"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42771"
+        },
+        {
+          "url": "https://errata.almalinux.org/8/ALSA-2021-4162.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2021:4162"
+        },
+        {
+          "url": "https://github.com/pallets/jinja"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/blob/ab81fd9c277900c85da0c322a2ff9d68a235b2e6/src/jinja2/utils.py%23L20"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/commit/15ef8f09b659f9100610583938005a7a10472d4d"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/pull/1343"
+        },
+        {
+          "url": "https://github.com/yetingli/PoCs/tree/main/CVE-2020-28493"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2020-28493.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2021-4162.html"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/PVAKCOO7VBVUBM3Q6CBBTPBFNP5NDXF4/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PVAKCOO7VBVUBM3Q6CBBTPBFNP5NDXF4"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-28493"
+        },
+        {
+          "url": "https://security.gentoo.org/glsa/202107-19"
+        },
+        {
+          "url": "https://snyk.io/vuln/SNYK-PYTHON-JINJA2-1012994"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-5701-1"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6599-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2020-28493"
+        }
+      ],
+      "published": "2021-02-01T20:15:12+00:00",
+      "updated": "2023-11-07T03:21:22+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.4.1",
+          "versions": [
+            {
+              "version": "2.4.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-33430",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 3.5,
+          "severity": "info",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:M/Au:S/C:N/I:N/A:P"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        120
+      ],
+      "description": "A Buffer Overflow vulnerability exists in NumPy 1.9.x in the PyArray_NewFromDescr_int function of ctors.c when specifying arrays of large dimensions (over 32) from Python code, which could let a malicious user cause a Denial of Service. NOTE: The vendor does not agree this is a vulneraility; In (very limited) circumstances a user may be able provoke the buffer overflow, the user is most likely already privileged to at least provoke denial of service by exhausting memory. Triggering this further requires the use of uncommon API (complicated structured dtypes), which is very unlikely to be available to an unprivileged user",
+      "recommendation": "Upgrade numpy to version 1.21",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2021-33430"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2021-33430"
+        },
+        {
+          "url": "https://github.com/numpy/numpy"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/commit/16f7824b4d935b6aee98298ca4123d57174a6f2e"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/commit/ae317fd9ff3e79c0eac357d723bfc29cbd625f2e"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/issues/18939"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/pull/18989"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-33430"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-5763-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2021-33430"
+        }
+      ],
+      "published": "2021-12-17T19:15:07+00:00",
+      "updated": "2024-08-04T00:15:32+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@1.10.3",
+          "versions": [
+            {
+              "version": "1.10.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-34141",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        697
+      ],
+      "description": "An incomplete string comparison in the numpy.core component in NumPy before 1.22.0 allows attackers to trigger slightly incorrect copying by constructing specific string objects. NOTE: the vendor states that this reported code behavior is \"completely harmless.\"",
+      "recommendation": "Upgrade numpy to version 1.22",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2021-34141"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2021-34141"
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-fpfv-jqm9-f5jm"
+        },
+        {
+          "url": "https://github.com/numpy/numpy"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/commit/eeef9d4646103c3b1afd3085f1393f2b3f9575b2"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/issues/18993"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/issues/18993#issuecomment-1010735102"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/numpy/PYSEC-2021-855.yaml"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-34141"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-5763-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2021-34141"
+        },
+        {
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        }
+      ],
+      "published": "2021-12-17T19:15:07+00:00",
+      "updated": "2023-02-24T15:35:45+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@1.10.3",
+          "versions": [
+            {
+              "version": "1.10.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-41495",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "cbl-mariner"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 3.5,
+          "severity": "info",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:M/Au:S/C:N/I:N/A:P"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        476
+      ],
+      "description": "Null Pointer Dereference vulnerability exists in numpy.sort in NumPy &lt and 1.19 in the PyArray_DescrNew function due to missing return-value validation, which allows attackers to conduct DoS attacks by repetitively creating sort arrays. NOTE: While correct that validation is missing, an error can only occur due to an exhaustion of memory. If the user can exhaust memory, they are already privileged. Further, it should be practically impossible to construct an attack which can target the memory exhaustion to occur at exactly this place",
+      "recommendation": "Upgrade numpy to version 1.19",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2021-41495"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2021-41495"
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-5545-2q6w-2gh6"
+        },
+        {
+          "url": "https://github.com/numpy/numpy"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/issues/19038"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/pull/20960"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/pull/20984"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/numpy/PYSEC-2021-856.yaml"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41495"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-5763-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2021-41495"
+        },
+        {
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        }
+      ],
+      "published": "2021-12-17T20:15:08+00:00",
+      "updated": "2024-08-04T04:15:39+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@1.10.3",
+          "versions": [
+            {
+              "version": "1.10.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-41496",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "cbl-mariner"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 2.1,
+          "severity": "info",
+          "method": "CVSSv2",
+          "vector": "AV:L/AC:L/Au:N/C:N/I:N/A:P"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 5.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "photon"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        120
+      ],
+      "description": "Buffer overflow in the array_from_pyobj function of fortranobject.c in NumPy < 1.19, which allows attackers to conduct a Denial of Service attacks by carefully constructing an array with negative values. NOTE: The vendor does not agree this is a vulnerability; the negative dimensions can only be created by an already privileged user (or internally)",
+      "recommendation": "Upgrade numpy to version 1.19",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2021-41496"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2021-41496"
+        },
+        {
+          "url": "https://github.com/numpy/numpy"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/commit/271010f1037150e95017f803f4214b8861e528f2"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/issues/19000"
+        },
+        {
+          "url": "https://github.com/numpy/numpy/pull/20630"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41496"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-5763-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2021-41496"
+        },
+        {
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        }
+      ],
+      "published": "2021-12-17T20:15:08+00:00",
+      "updated": "2024-08-04T04:15:44+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@1.10.3",
+          "versions": [
+            {
+              "version": "1.10.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-22195",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "amazon"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "cbl-mariner"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 6.1,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        79
+      ],
+      "description": "Jinja is an extensible templating engine. Special placeholders in the template allow writing code similar to Python syntax. It is possible to inject arbitrary HTML attributes into the rendered HTML template, potentially leading to Cross-Site Scripting (XSS). The Jinja `xmlattr` filter can be abused to inject arbitrary HTML attribute keys and values, bypassing the auto escaping mechanism and potentially leading to XSS. It may also be possible to bypass attribute validation checks if they are blacklist-based.\n",
+      "recommendation": "Upgrade jinja2 to version 3.1.3",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-22195"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2024:2348"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-22195"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2257854"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2257854"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22195"
+        },
+        {
+          "url": "https://errata.almalinux.org/9/ALSA-2024-2348.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2024:3102"
+        },
+        {
+          "url": "https://github.com/pallets/jinja"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/commit/716795349a41d4983a9a4771f7d883c96ea17be7"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/releases/tag/3.1.3"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/security/advisories/GHSA-h5c8-rqwp-cp95"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2024-22195.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2024-3102.html"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2024/01/msg00010.html"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5XCWZD464AJJJUBOO7CMPXQ4ROBC6JX2"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5XCWZD464AJJJUBOO7CMPXQ4ROBC6JX2/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DELCVUUYX75I5K4Q5WMJG4MUZJA6VAIP"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DELCVUUYX75I5K4Q5WMJG4MUZJA6VAIP/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O7YWRBX6JQCWC2XXCTZ55C7DPMGICCN3"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O7YWRBX6JQCWC2XXCTZ55C7DPMGICCN3/"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22195"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6599-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-22195"
+        }
+      ],
+      "published": "2024-01-11T03:15:11+00:00",
+      "updated": "2024-01-27T03:15:08+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.4.1",
+          "versions": [
+            {
+              "version": "2.4.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-34064",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "amazon"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "cbl-mariner"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        79
+      ],
+      "description": "Jinja is an extensible templating engine. The `xmlattr` filter in affected versions of Jinja accepts keys containing non-attribute characters. XML/HTML attributes cannot contain spaces, `/`, `>`, or `=`, as each would then be interpreted as starting a separate attribute. If an application accepts keys (as opposed to only values) as user input, and renders these in pages that other users see as well, an attacker could use this to inject other attributes and perform XSS. The fix for CVE-2024-22195 only addressed spaces but not other characters. Accepting keys as user input is now explicitly considered an unintended use case of the `xmlattr` filter, and code that does so without otherwise validating the input should be flagged as insecure, regardless of Jinja version. Accepting _values_ as user input continues to be safe. This vulnerability is fixed in 3.1.4.",
+      "recommendation": "Upgrade jinja2 to version 3.1.4",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-34064"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2024:3820"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-34064"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2279476"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2279476"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34064"
+        },
+        {
+          "url": "https://errata.almalinux.org/9/ALSA-2024-3820.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2024:3820"
+        },
+        {
+          "url": "https://github.com/pallets/jinja"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/commit/0668239dc6b44ef38e7a6c9f91f312fd4ca581cb"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/security/advisories/GHSA-h75v-3vvj-5mfj"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2024-34064.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2024-4231.html"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/567XIGSZMABG6TSMYWD7MIYNJSUQQRUC"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/567XIGSZMABG6TSMYWD7MIYNJSUQQRUC/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GCLF44KY43BSVMTE6S53B4V5WP3FRRSE"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GCLF44KY43BSVMTE6S53B4V5WP3FRRSE/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SSCBHIL6BYKR5NRCBXP4XMP2CEEKGFVS"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SSCBHIL6BYKR5NRCBXP4XMP2CEEKGFVS/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZALNWE3TXPPHVPSI3AZ5CTMSTAVN5UMS"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZALNWE3TXPPHVPSI3AZ5CTMSTAVN5UMS/"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34064"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6787-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-34064"
+        }
+      ],
+      "published": "2024-05-06T15:15:23+00:00",
+      "updated": "2024-06-10T18:15:34+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.4.1",
+          "versions": [
+            {
+              "version": "2.4.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
