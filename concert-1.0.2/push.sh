@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
-concert_url="https://concert-dev-01.fyre.ibm.com:12443"
-auth_hdr="Authorization: C_API_KEY aWJtY29uY2VydDo0NjM4MmNhNi04MzM1LTRiZjctOGJkMC02NWVjNzgzZmFhOGM="
+concert_url=${CONCERT_URL:-"https://concert-dev-01.fyre.ibm.com:12443"}
+auth_hdr="Authorization: ${CONCERT_API_KEY}"
 inst_hdr='InstanceId: 0000-0000-0000-0000'
 
 
