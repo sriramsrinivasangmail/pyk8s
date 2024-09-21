@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-image="localhost:5000/pyk8s:latest"
+image="pyk8s:v1"
 
 docker build -t ${image} .
