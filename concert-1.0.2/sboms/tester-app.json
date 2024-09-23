@@ -2,11 +2,11 @@
     "bomFormat": "ConcertDef",
     "specVersion": "1.0.2",
     "metadata": {
-        "timestamp": "2024-09-21T15:43:24Z",
+        "timestamp": "2024-09-23T03:12:45Z",
         "type": "application",
         "component": {
             "name": "tester",
-            "version": "1.0.0"
+            "version": "2.0.1"
         },
         "business": {
             "name": "Springfield Nuclear Inc.",
@@ -37,14 +37,14 @@
             "bom-ref": "build:pyk8s",
             "type": "build",
             "name": "pyk8s",
-            "version": "1.0.0",
+            "version": "2.0.2",
             "components": [
                 {
                     "bom-ref": "container:pyk8s",
                     "type": "container",
                     "name": "pyk8s",
-                    "uri": "pyk8s:v1@sha256:b4189360e7a104725e3d0c5b33544bbc84c1d2115601fa396b0f04915c3b4b08",
-                    "tag": "v1",
+                    "uri": "pyk8s:v2b1@sha256:b4189360e7a104725e3d0c5b33544bbc84c1d2115601fa396b0f04915c3b4b08",
+                    "tag": "v2b1",
                     "digest": "sha256:b4189360e7a104725e3d0c5b33544bbc84c1d2115601fa396b0f04915c3b4b08"
                 },
                 {
