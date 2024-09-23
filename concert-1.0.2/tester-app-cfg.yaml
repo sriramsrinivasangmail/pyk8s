@@ -21,12 +21,12 @@ concert:
         name: "pyk8s"
         url: "git@github.com:sriramsrinivasangmail/pyk8s.git"
         branch: "main"
-        commit_sha: "f8d6f728102994f1065494cc0539f0df0800dc5b"
+        commit_sha: "ghi6f728102994f1065494cc0539f0df0800dc5b"
       image:
         uri_parts:
           name: "pyk8s"
-          tag: "v2b1"
-          digest: "sha256:b4189360e7a104725e3d0c5b33544bbc84c1d2115601fa396b0f04915c3b4b08"
+          tag: "v2b2"
+          digest: "sha256:b5289360e7a104725e3d0c5b33544bbc84c1d2115601fa396b0f04915c3b4b08"
     environment_targets:
     - "dev"
     services:
@@ -36,6 +36,7 @@ concert:
       - "/repeater"
       - "/donut"
       - "/lard_boy"
+      - "/school"
       properties:
         network_exposure: "private"
       reliant_by:

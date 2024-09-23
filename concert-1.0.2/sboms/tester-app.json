@@ -2,7 +2,7 @@
     "bomFormat": "ConcertDef",
     "specVersion": "1.0.2",
     "metadata": {
-        "timestamp": "2024-09-23T03:12:45Z",
+        "timestamp": "2024-09-23T14:12:55Z",
         "type": "application",
         "component": {
             "name": "tester",
@@ -43,9 +43,9 @@
                     "bom-ref": "container:pyk8s",
                     "type": "container",
                     "name": "pyk8s",
-                    "uri": "pyk8s:v2b1@sha256:b4189360e7a104725e3d0c5b33544bbc84c1d2115601fa396b0f04915c3b4b08",
-                    "tag": "v2b1",
-                    "digest": "sha256:b4189360e7a104725e3d0c5b33544bbc84c1d2115601fa396b0f04915c3b4b08"
+                    "uri": "pyk8s:v2b2@sha256:b5289360e7a104725e3d0c5b33544bbc84c1d2115601fa396b0f04915c3b4b08",
+                    "tag": "v2b2",
+                    "digest": "sha256:b5289360e7a104725e3d0c5b33544bbc84c1d2115601fa396b0f04915c3b4b08"
                 },
                 {
                     "bom-ref": "repository:coderepo:github:pyk8s",
@@ -53,7 +53,7 @@
                     "name": "pyk8s",
                     "purl": "git@github.com:sriramsrinivasangmail/pyk8s.git",
                     "branch": "main",
-                    "commit_sha": "f8d6f728102994f1065494cc0539f0df0800dc5b"
+                    "commit_sha": "ghi6f728102994f1065494cc0539f0df0800dc5b"
                 }
             ]
         }
@@ -65,7 +65,8 @@
             "endpoints": [
                 "/repeater",
                 "/donut",
-                "/lard_boy"
+                "/lard_boy",
+                "/school"
             ],
             "properties": [
                 {
