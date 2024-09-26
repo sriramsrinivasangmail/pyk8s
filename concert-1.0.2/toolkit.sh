@@ -10,7 +10,7 @@ export TOOLKIT_IMAGE="ibm-concert-toolkit:v1"
 export HOST_DIR_SRC_CODE=$(dirname $(dirname $(readlink -f "${BASH_SOURCE[0]}")))
 
 export HOST_DIR_MNT=$(basename $HOST_DIR_SRC_CODE)
-export HOST_DIR_TOOLKIT_DATA="${curr_dir}/sboms"
+export HOST_DIR_TOOLKIT_DATA="${curr_dir}/generated"
 mkdir -p ${HOST_DIR_TOOLKIT_DATA}
 export TOOLKIT_RUN="docker run \
   -v ${HOST_DIR_SRC_CODE}:/${HOST_DIR_MNT} \

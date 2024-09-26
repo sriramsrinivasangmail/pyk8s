@@ -1,4 +1,4 @@
-version: "1.0.2"
+spec_version: "1.0.2"
 concert:
   application:
     output_file: "tester-app.json" 
@@ -10,35 +10,28 @@ concert:
       - name: "Sector 7G"
         email: "homer@springfield.nuc"
         phone: "555-456-7890"
-    labels:
-      ckey: pyk8s
     properties:
       application_criticality: "5"
     components:
     - component_name: "pyk8s"
-      version: "2.0.2"
+      version: "2.0.1"
       repository:
         name: "pyk8s"
         url: "git@github.com:sriramsrinivasangmail/pyk8s.git"
-        branch: "main"
-        commit_sha: "ghi6f728102994f1065494cc0539f0df0800dc5b"
       image:
-        uri_parts:
-          name: "pyk8s"
-          tag: "v2b2"
-          digest: "sha256:b5289360e7a104725e3d0c5b33544bbc84c1d2115601fa396b0f04915c3b4b08"
+        name: "myregistry:5000/sector7g/pyk8s"
     environment_targets:
-    - "dev"
+    - name: "dev"
     services:
     - name: "echo_access"
       type: "app_end_point"
+      properties:
+        network_exposure: "private"
       endpoints: 
       - "/repeater"
       - "/donut"
       - "/lard_boy"
       - "/school"
-      properties:
-        network_exposure: "private"
       reliant_by:
       - "pyk8s"
     - name: "ext_echo"

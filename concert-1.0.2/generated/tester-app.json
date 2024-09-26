@@ -1,0 +1,96 @@
+{
+    "bomFormat": "ConcertDef",
+    "specVersion": "1.0.2",
+    "metadata": {
+        "timestamp": "2024-09-26T18:06:16Z",
+        "type": "application",
+        "component": {
+            "name": "tester",
+            "version": "2.0.1"
+        },
+        "business": {
+            "name": "Springfield Nuclear Inc.",
+            "units": [
+                {
+                    "name": "Sector 7G",
+                    "email": "homer@springfield.nuc",
+                    "phone": "555-456-7890"
+                }
+            ]
+        }
+    },
+    "environments": [
+        {
+            "bom-ref": "environment:dev",
+            "type": "environment",
+            "name": "dev"
+        }
+    ],
+    "components": [
+        {
+            "bom-ref": "build:pyk8s",
+            "type": "build",
+            "name": "pyk8s",
+            "version": "2.0.1",
+            "components": [
+                {
+                    "bom-ref": "container:myregistry:5000/sector7g/pyk8s",
+                    "type": "container",
+                    "name": "myregistry:5000/sector7g/pyk8s"
+                },
+                {
+                    "bom-ref": "repository:coderepo:github:pyk8s",
+                    "type": "code",
+                    "name": "pyk8s",
+                    "purl": "git@github.com:sriramsrinivasangmail/pyk8s.git"
+                }
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "name": "application_criticality",
+            "value": "5"
+        }
+    ],
+    "services": [
+        {
+            "bom-ref": "appapi:echo_access",
+            "name": "echo_access",
+            "endpoints": [
+                "/repeater",
+                "/donut",
+                "/lard_boy",
+                "/school"
+            ],
+            "properties": [
+                {
+                    "name": "network_exposure",
+                    "value": "private"
+                }
+            ]
+        },
+        {
+            "bom-ref": "appapi:ext_echo",
+            "name": "ext_echo",
+            "endpoints": [
+                "/welcome"
+            ],
+            "properties": [
+                {
+                    "name": "network_exposure",
+                    "value": "public"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "bom-ref": "build:pyk8s",
+            "dependsOn": [
+                "appapi:echo_access",
+                "appapi:ext_echo"
+            ]
+        }
+    ]
+}
