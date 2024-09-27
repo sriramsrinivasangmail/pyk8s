@@ -1,0 +1,1946 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:8e390bb8-a51b-4120-9bae-8354534c9cb4",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-09-27T02:21:51+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.52.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "616309a5-b0cf-4061-a65c-8418f74dbaa5",
+      "type": "application",
+      "name": "pyk8s",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "27ec4a13-b6dd-4235-aca3-05df2e7210d2",
+      "type": "application",
+      "name": "requirements.txt",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/distlib@0.3.4",
+      "type": "library",
+      "name": "distlib",
+      "version": "0.3.4",
+      "purl": "pkg:pypi/distlib@0.3.4",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/django@5.0",
+      "type": "library",
+      "name": "django",
+      "version": "5.0",
+      "purl": "pkg:pypi/django@5.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/filelock@3.6.0",
+      "type": "library",
+      "name": "filelock",
+      "version": "3.6.0",
+      "purl": "pkg:pypi/filelock@3.6.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/flask@3.0.0",
+      "type": "library",
+      "name": "flask",
+      "version": "3.0.0",
+      "purl": "pkg:pypi/flask@3.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/jinja2@3.1.2",
+      "type": "library",
+      "name": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/platformdirs@2.5.1",
+      "type": "library",
+      "name": "platformdirs",
+      "version": "2.5.1",
+      "purl": "pkg:pypi/platformdirs@2.5.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/pyyaml@5.3",
+      "type": "library",
+      "name": "PyYAML",
+      "version": "5.3",
+      "purl": "pkg:pypi/pyyaml@5.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/six@1.16.0",
+      "type": "library",
+      "name": "six",
+      "version": "1.16.0",
+      "purl": "pkg:pypi/six@1.16.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "27ec4a13-b6dd-4235-aca3-05df2e7210d2",
+      "dependsOn": [
+        "pkg:pypi/distlib@0.3.4",
+        "pkg:pypi/django@5.0",
+        "pkg:pypi/filelock@3.6.0",
+        "pkg:pypi/flask@3.0.0",
+        "pkg:pypi/jinja2@3.1.2",
+        "pkg:pypi/platformdirs@2.5.1",
+        "pkg:pypi/pyyaml@5.3",
+        "pkg:pypi/six@1.16.0"
+      ]
+    },
+    {
+      "ref": "616309a5-b0cf-4061-a65c-8418f74dbaa5",
+      "dependsOn": [
+        "27ec4a13-b6dd-4235-aca3-05df2e7210d2"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/distlib@0.3.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/django@5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/filelock@3.6.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/flask@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/jinja2@3.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/platformdirs@2.5.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pyyaml@5.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/six@1.16.0",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2020-14343",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "cbl-mariner"
+          },
+          "severity": "critical"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 10,
+          "severity": "high",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:C/I:C/A:C"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "photon"
+          },
+          "severity": "critical"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 9.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        20
+      ],
+      "description": "A vulnerability was discovered in the PyYAML library in versions before 5.4, where it is susceptible to arbitrary code execution when it processes untrusted YAML files through the full_load method or with the FullLoader loader. Applications that use the library to process untrusted input may be vulnerable to this flaw. This flaw allows an attacker to execute arbitrary code on the system by abusing the python/object/new constructor. This flaw is due to an incomplete fix for CVE-2020-1747.",
+      "recommendation": "Upgrade PyYAML to version 5.4",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2020-14343"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2020-14343"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1860466"
+        },
+        {
+          "url": "https://errata.almalinux.org/8/ALSA-2021-2583.html"
+        },
+        {
+          "url": "https://github.com/SeldonIO/seldon-core/issues/2252"
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-8q59-q68h-6hv4"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/commit/a001f2782501ad2d24986959f0239a354675f9dc"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/issues/420"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/issues/420#issuecomment-663673966"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2020-14343.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2021-2583.html"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-14343"
+        },
+        {
+          "url": "https://pypi.org/project/PyYAML"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-4940-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2020-14343"
+        },
+        {
+          "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+        },
+        {
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        }
+      ],
+      "published": "2021-02-09T21:15:12+00:00",
+      "updated": "2023-07-06T18:15:10+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/pyyaml@5.3",
+          "versions": [
+            {
+              "version": "5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2020-1747",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "cbl-mariner"
+          },
+          "severity": "critical"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 10,
+          "severity": "high",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:C/I:C/A:C"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "photon"
+          },
+          "severity": "critical"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 9.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes": [
+        20
+      ],
+      "description": "A vulnerability was discovered in the PyYAML library in versions before 5.3.1, where it is susceptible to arbitrary code execution when it processes untrusted YAML files through the full_load method or with the FullLoader loader. Applications that use the library to process untrusted input may be vulnerable to this flaw. An attacker could use this flaw to execute arbitrary code on the system by abusing the python/object/new constructor.",
+      "recommendation": "Upgrade PyYAML to version 5.3.1",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2020-1747"
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2020-04/msg00017.html"
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2020-05/msg00017.html"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2020-1747"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2020-1747"
+        },
+        {
+          "url": "https://errata.almalinux.org/8/ALSA-2020-4641.html"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/commit/5080ba513377b6355a0502104846ee804656f1e0"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/pull/386"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2020-1747.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2020-4641.html"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/7PPAS6C4SZRDQLR7C22A5U3QOLXY33JX/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/K5HEPD7LEVDPCITY5IMDYWXUMX37VFMY/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/MMQXSZXNJT6ERABJZAAICI3DQSQLCP3D/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/WORRFHPQVAFKKXXWLSSW6XKUYLWM6CSH/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZBJA3SGNJKCAYPSHOHWY3KBCWNM5NYK2/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7PPAS6C4SZRDQLR7C22A5U3QOLXY33JX"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/K5HEPD7LEVDPCITY5IMDYWXUMX37VFMY"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MMQXSZXNJT6ERABJZAAICI3DQSQLCP3D"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WORRFHPQVAFKKXXWLSSW6XKUYLWM6CSH"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZBJA3SGNJKCAYPSHOHWY3KBCWNM5NYK2"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-1747"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2020-1747"
+        },
+        {
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        }
+      ],
+      "published": "2020-03-24T15:15:12+00:00",
+      "updated": "2023-11-07T03:19:32+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/pyyaml@5.3",
+          "versions": [
+            {
+              "version": "5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-22195",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "amazon"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "cbl-mariner"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 6.1,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        79
+      ],
+      "description": "Jinja is an extensible templating engine. Special placeholders in the template allow writing code similar to Python syntax. It is possible to inject arbitrary HTML attributes into the rendered HTML template, potentially leading to Cross-Site Scripting (XSS). The Jinja `xmlattr` filter can be abused to inject arbitrary HTML attribute keys and values, bypassing the auto escaping mechanism and potentially leading to XSS. It may also be possible to bypass attribute validation checks if they are blacklist-based.\n",
+      "recommendation": "Upgrade jinja2 to version 3.1.3",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-22195"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2024:2348"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-22195"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2257854"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2257854"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22195"
+        },
+        {
+          "url": "https://errata.almalinux.org/9/ALSA-2024-2348.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2024:3102"
+        },
+        {
+          "url": "https://github.com/pallets/jinja"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/commit/716795349a41d4983a9a4771f7d883c96ea17be7"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/releases/tag/3.1.3"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/security/advisories/GHSA-h5c8-rqwp-cp95"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2024-22195.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2024-3102.html"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2024/01/msg00010.html"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5XCWZD464AJJJUBOO7CMPXQ4ROBC6JX2"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5XCWZD464AJJJUBOO7CMPXQ4ROBC6JX2/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DELCVUUYX75I5K4Q5WMJG4MUZJA6VAIP"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DELCVUUYX75I5K4Q5WMJG4MUZJA6VAIP/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O7YWRBX6JQCWC2XXCTZ55C7DPMGICCN3"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O7YWRBX6JQCWC2XXCTZ55C7DPMGICCN3/"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22195"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6599-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-22195"
+        }
+      ],
+      "published": "2024-01-11T03:15:11+00:00",
+      "updated": "2024-01-27T03:15:08+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@3.1.2",
+          "versions": [
+            {
+              "version": "3.1.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-24680",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "bitnami"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.9,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "description": "An issue was discovered in Django 3.2 before 3.2.24, 4.2 before 4.2.10, and Django 5.0 before 5.0.2. The intcomma template filter was subject to a potential denial-of-service attack when used with very long strings.",
+      "recommendation": "Upgrade django to version 3.2.24, 4.2.10, 5.0.2",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-24680"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-24680"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.0/releases/security"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.0/releases/security/"
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-xxj9-f6rv-m3x4"
+        },
+        {
+          "url": "https://github.com/django/django"
+        },
+        {
+          "url": "https://github.com/django/django/commit/16a8fe18a3b81250f4fa57e3f93f0599dc4895bc"
+        },
+        {
+          "url": "https://github.com/django/django/commit/55519d6cf8998fe4c8f5c8abffc2b10a7c3d14e9"
+        },
+        {
+          "url": "https://github.com/django/django/commit/572ea07e84b38ea8de0551f4b4eda685d91d09d2"
+        },
+        {
+          "url": "https://github.com/django/django/commit/c1171ffbd570db90ca206c30f8e2b9f691243820"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2024-28.yaml"
+        },
+        {
+          "url": "https://groups.google.com/forum/#%21forum/django-announce"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/D2JIRXEDP4ZET5KFMAPPYSK663Q52NEX"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/D2JIRXEDP4ZET5KFMAPPYSK663Q52NEX/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SN2PLJGYSAAG5KUVIUFJYKD3BLQ4OSN6"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SN2PLJGYSAAG5KUVIUFJYKD3BLQ4OSN6/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-24680"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6623-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-24680"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/feb/06/security-releases"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/feb/06/security-releases/"
+        }
+      ],
+      "published": "2024-02-06T22:16:15+00:00",
+      "updated": "2024-04-20T03:15:06+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/django@5.0",
+          "versions": [
+            {
+              "version": "5.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-27351",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "bitnami"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        1333
+      ],
+      "description": "In Django 3.2 before 3.2.25, 4.2 before 4.2.11, and 5.0 before 5.0.3, the django.utils.text.Truncator.words() method (with html=True) and the truncatewords_html template filter are subject to a potential regular expression denial-of-service attack via a crafted string. NOTE: this issue exists because of an incomplete fix for CVE-2019-14232 and CVE-2023-43665.",
+      "recommendation": "Upgrade django to version 3.2.25, 4.2.11, 5.0.3",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-27351"
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2024/03/04/1"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-27351"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.0/releases/security"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.0/releases/security/"
+        },
+        {
+          "url": "https://github.com/django/django"
+        },
+        {
+          "url": "https://github.com/django/django/commit/072963e4c4d0b3a7a8c5412bc0c7d27d1a9c3521"
+        },
+        {
+          "url": "https://github.com/django/django/commit/3394fc6132436eca89e997083bae9985fb7e761e"
+        },
+        {
+          "url": "https://github.com/django/django/commit/3c9a2771cc80821e041b16eb36c1c37af5349d4a"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2024-47.yaml"
+        },
+        {
+          "url": "https://groups.google.com/forum/#%21forum/django-announce"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/D2JIRXEDP4ZET5KFMAPPYSK663Q52NEX"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/D2JIRXEDP4ZET5KFMAPPYSK663Q52NEX/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SN2PLJGYSAAG5KUVIUFJYKD3BLQ4OSN6"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SN2PLJGYSAAG5KUVIUFJYKD3BLQ4OSN6/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27351"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6674-1"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6674-2"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-27351"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/mar/04/security-releases"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/mar/04/security-releases/"
+        }
+      ],
+      "published": "2024-03-15T20:15:09+00:00",
+      "updated": "2024-07-03T01:50:33+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/django@5.0",
+          "versions": [
+            {
+              "version": "5.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-34064",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "amazon"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "cbl-mariner"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        79
+      ],
+      "description": "Jinja is an extensible templating engine. The `xmlattr` filter in affected versions of Jinja accepts keys containing non-attribute characters. XML/HTML attributes cannot contain spaces, `/`, `>`, or `=`, as each would then be interpreted as starting a separate attribute. If an application accepts keys (as opposed to only values) as user input, and renders these in pages that other users see as well, an attacker could use this to inject other attributes and perform XSS. The fix for CVE-2024-22195 only addressed spaces but not other characters. Accepting keys as user input is now explicitly considered an unintended use case of the `xmlattr` filter, and code that does so without otherwise validating the input should be flagged as insecure, regardless of Jinja version. Accepting _values_ as user input continues to be safe. This vulnerability is fixed in 3.1.4.",
+      "recommendation": "Upgrade jinja2 to version 3.1.4",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-34064"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2024:3820"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-34064"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2279476"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2279476"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34064"
+        },
+        {
+          "url": "https://errata.almalinux.org/9/ALSA-2024-3820.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2024:3820"
+        },
+        {
+          "url": "https://github.com/pallets/jinja"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/commit/0668239dc6b44ef38e7a6c9f91f312fd4ca581cb"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/security/advisories/GHSA-h75v-3vvj-5mfj"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2024-34064.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2024-4231.html"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/567XIGSZMABG6TSMYWD7MIYNJSUQQRUC"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/567XIGSZMABG6TSMYWD7MIYNJSUQQRUC/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GCLF44KY43BSVMTE6S53B4V5WP3FRRSE"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GCLF44KY43BSVMTE6S53B4V5WP3FRRSE/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SSCBHIL6BYKR5NRCBXP4XMP2CEEKGFVS"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SSCBHIL6BYKR5NRCBXP4XMP2CEEKGFVS/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZALNWE3TXPPHVPSI3AZ5CTMSTAVN5UMS"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZALNWE3TXPPHVPSI3AZ5CTMSTAVN5UMS/"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34064"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6787-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-34064"
+        }
+      ],
+      "published": "2024-05-06T15:15:23+00:00",
+      "updated": "2024-06-10T18:15:34+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@3.1.2",
+          "versions": [
+            {
+              "version": "3.1.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-38875",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        130
+      ],
+      "description": "An issue was discovered in Django 4.2 before 4.2.14 and 5.0 before 5.0.7. urlize and urlizetrunc were subject to a potential denial of service attack via certain inputs with a very large number of brackets.",
+      "recommendation": "Upgrade django to version 4.2.14, 5.0.7",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-38875"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-38875"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+        },
+        {
+          "url": "https://github.com/django/django"
+        },
+        {
+          "url": "https://github.com/django/django/commit/7285644640f085f41d60ab0c8ae4e9153f0485db"
+        },
+        {
+          "url": "https://github.com/django/django/commit/79f368764295df109a37192f6182fb6f361d85b5"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2024-56.yaml"
+        },
+        {
+          "url": "https://groups.google.com/forum/#%21forum/django-announce"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-38875"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6888-1"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6888-2"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-38875"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/jul/09/security-releases"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/jul/09/security-releases/"
+        }
+      ],
+      "published": "2024-07-10T05:15:12+00:00",
+      "updated": "2024-07-12T16:11:48+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/django@5.0",
+          "versions": [
+            {
+              "version": "5.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-39329",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "low"
+        }
+      ],
+      "cwes": [
+        208
+      ],
+      "description": "An issue was discovered in Django 5.0 before 5.0.7 and 4.2 before 4.2.14. The django.contrib.auth.backends.ModelBackend.authenticate() method allows remote attackers to enumerate users via a timing attack involving login requests for users with an unusable password.",
+      "recommendation": "Upgrade django to version 5.0.7, 4.2.14",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-39329"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-39329"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+        },
+        {
+          "url": "https://github.com/django/django"
+        },
+        {
+          "url": "https://github.com/django/django/commit/07cefdee4a9d1fcd9a3a631cbd07c78defd1923b"
+        },
+        {
+          "url": "https://github.com/django/django/commit/156d3186c96e3ec2ca73b8b25dc2ef366e38df14"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2024-57.yaml"
+        },
+        {
+          "url": "https://groups.google.com/forum/#%21forum/django-announce"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-39329"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6888-1"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6888-2"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-39329"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/jul/09/security-releases"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/jul/09/security-releases/"
+        }
+      ],
+      "published": "2024-07-10T05:15:12+00:00",
+      "updated": "2024-07-11T15:06:11+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/django@5.0",
+          "versions": [
+            {
+              "version": "5.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-39330",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 4.3,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "low"
+        }
+      ],
+      "description": "An issue was discovered in Django 5.0 before 5.0.7 and 4.2 before 4.2.14. Derived classes of the django.core.files.storage.Storage base class, when they override generate_filename() without replicating the file-path validations from the parent class, potentially allow directory traversal via certain inputs during a save() call. (Built-in Storage sub-classes are unaffected.)",
+      "recommendation": "Upgrade django to version 5.0.7, 4.2.14",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-39330"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-39330"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+        },
+        {
+          "url": "https://github.com/django/django"
+        },
+        {
+          "url": "https://github.com/django/django/commit/2b00edc0151a660d1eb86da4059904a0fc4e095e"
+        },
+        {
+          "url": "https://github.com/django/django/commit/9f4f63e9ebb7bf6cb9547ee4e2526b9b96703270"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2024-58.yaml"
+        },
+        {
+          "url": "https://groups.google.com/forum/#%21forum/django-announce"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-39330"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6888-1"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6888-2"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-39330"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/jul/09/security-releases"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/jul/09/security-releases/"
+        }
+      ],
+      "published": "2024-07-10T05:15:12+00:00",
+      "updated": "2024-07-11T13:05:54+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/django@5.0",
+          "versions": [
+            {
+              "version": "5.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-39614",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        130
+      ],
+      "description": "An issue was discovered in Django 5.0 before 5.0.7 and 4.2 before 4.2.14. get_supported_language_variant() was subject to a potential denial-of-service attack when used with very long strings containing specific characters.",
+      "recommendation": "Upgrade django to version 5.0.7, 4.2.14",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-39614"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-39614"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+        },
+        {
+          "url": "https://github.com/django/django"
+        },
+        {
+          "url": "https://github.com/django/django/commit/17358fb35fb7217423d4c4877ccb6d1a3a40b1c3"
+        },
+        {
+          "url": "https://github.com/django/django/commit/8e7a44e4bec0f11474699c3111a5e0a45afe7f49"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2024-59.yaml"
+        },
+        {
+          "url": "https://groups.google.com/forum/#%21forum/django-announce"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-39614"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6888-1"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6888-2"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-39614"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/jul/09/security-releases"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/jul/09/security-releases/"
+        }
+      ],
+      "published": "2024-07-10T05:15:12+00:00",
+      "updated": "2024-08-01T13:55:55+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/django@5.0",
+          "versions": [
+            {
+              "version": "5.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-41989",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "bitnami"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "description": "An issue was discovered in Django 5.0 before 5.0.8 and 4.2 before 4.2.15. The floatformat template filter is subject to significant memory consumption when given a string representation of a number in scientific notation with a large exponent.",
+      "recommendation": "Upgrade django to version 5.0.8, 4.2.15",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-41989"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-41989"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+        },
+        {
+          "url": "https://github.com/django/django"
+        },
+        {
+          "url": "https://github.com/django/django/commit/27900fe56f3d3cabb4aeb6ccb82f92bab29073a8"
+        },
+        {
+          "url": "https://github.com/django/django/commit/fc76660f589ac07e45e9cd34ccb8087aeb11904b"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2024-67.yaml"
+        },
+        {
+          "url": "https://groups.google.com/forum/#%21forum/django-announce"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-41989"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6946-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-41989"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/aug/06/security-releases"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/aug/06/security-releases/"
+        }
+      ],
+      "published": "2024-08-07T15:15:56+00:00",
+      "updated": "2024-08-08T20:35:11+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/django@5.0",
+          "versions": [
+            {
+              "version": "5.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-41990",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "bitnami"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        130
+      ],
+      "description": "An issue was discovered in Django 5.0 before 5.0.8 and 4.2 before 4.2.15. The urlize() and urlizetrunc() template filters are subject to a potential denial-of-service attack via very large inputs with a specific sequence of characters.",
+      "recommendation": "Upgrade django to version 5.0.8, 4.2.15",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-41990"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-41990"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+        },
+        {
+          "url": "https://github.com/django/django"
+        },
+        {
+          "url": "https://github.com/django/django/commit/7b7b909579c8311c140c89b8a9431bf537febf93"
+        },
+        {
+          "url": "https://github.com/django/django/commit/d0a82e26a74940bf0c78204933c3bdd6a283eb88"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2024-68.yaml"
+        },
+        {
+          "url": "https://groups.google.com/forum/#%21forum/django-announce"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-41990"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6946-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-41990"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/aug/06/security-releases"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/aug/06/security-releases/"
+        }
+      ],
+      "published": "2024-08-07T15:15:56+00:00",
+      "updated": "2024-08-07T20:49:50+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/django@5.0",
+          "versions": [
+            {
+              "version": "5.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-41991",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "bitnami"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        1284,
+        130
+      ],
+      "description": "An issue was discovered in Django 5.0 before 5.0.8 and 4.2 before 4.2.15. The urlize and urlizetrunc template filters, and the AdminURLFieldWidget widget, are subject to a potential denial-of-service attack via certain inputs with a very large number of Unicode characters.",
+      "recommendation": "Upgrade django to version 5.0.8, 4.2.15",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-41991"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-41991"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+        },
+        {
+          "url": "https://github.com/django/django"
+        },
+        {
+          "url": "https://github.com/django/django/commit/523da8771bce321023f490f70d71a9e973ddc927"
+        },
+        {
+          "url": "https://github.com/django/django/commit/efea1ef7e2190e3f77ca0651b5458297bc0f6a9f"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2024-69.yaml"
+        },
+        {
+          "url": "https://groups.google.com/forum/#%21forum/django-announce"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-41991"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6946-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-41991"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/aug/06/security-releases"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/aug/06/security-releases/"
+        }
+      ],
+      "published": "2024-08-07T15:15:56+00:00",
+      "updated": "2024-08-07T20:48:22+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/django@5.0",
+          "versions": [
+            {
+              "version": "5.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-42005",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "bitnami"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 9.1,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        89
+      ],
+      "description": "An issue was discovered in Django 5.0 before 5.0.8 and 4.2 before 4.2.15. QuerySet.values() and values_list() methods on models with a JSONField are subject to SQL injection in column aliases via a crafted JSON object key as a passed *arg.",
+      "recommendation": "Upgrade django to version 5.0.8, 4.2.15",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-42005"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-42005"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+        },
+        {
+          "url": "https://github.com/django/django"
+        },
+        {
+          "url": "https://github.com/django/django/commit/32ebcbf2e1fe3e5ba79a6554a167efce81f7422d"
+        },
+        {
+          "url": "https://github.com/django/django/commit/f4af67b9b41e0f4c117a8741da3abbd1c869ab28"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2024-70.yaml"
+        },
+        {
+          "url": "https://groups.google.com/forum/#%21forum/django-announce"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-42005"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-6946-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-42005"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/aug/06/security-releases"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2024/aug/06/security-releases/"
+        }
+      ],
+      "published": "2024-08-07T15:15:56+00:00",
+      "updated": "2024-09-03T18:35:10+00:00",
+      "affects": [
+        {
+          "ref": "pkg:pypi/django@5.0",
+          "versions": [
+            {
+              "version": "5.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,12 +2,12 @@
     "bomFormat": "ConcertDef",
     "specVersion": "1.0.2",
     "metadata": {
-        "timestamp": "2024-09-26T19:14:01Z",
+        "timestamp": "2024-09-27T02:02:09Z",
         "type": "build",
         "component": {
             "name": "pyk8s",
             "version": "2.0.1",
-            "build-number": "v2.0.1-84-20240410-200742"
+            "build-number": "v2.0.1-88-20240710-200742"
         }
     },
     "components": [
@@ -16,8 +16,8 @@
             "type": "container",
             "name": "myregistry:5000/sector7g/pyk8s",
             "tag": "v2",
-            "digest": "sha256:a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-            "uri": "myregistry:5000/sector7g/pyk8s:v2@sha256:a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
+            "digest": "sha256:pp65a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+            "uri": "myregistry:5000/sector7g/pyk8s:v2@sha256:pp65a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
         },
         {
             "bom-ref": "repository:coderepo:github:pyk8s",
@@ -25,7 +25,7 @@
             "name": "pyk8s",
             "purl": "git@github.com:sriramsrinivasangmail/pyk8s.git",
             "branch": "main",
-            "commit_sha": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+            "commit_sha": "pp7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
         }
     ]
 }

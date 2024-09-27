@@ -20,15 +20,26 @@ push_app_sbom()
    echo
 }
 
-push_pkg_sbom()
+push_pkg_sbom_for_src()
 {
     echo === $0 ====
 
     $DRY_RUN ${CURL} --request POST --url "${concert_url}/ingestion/api/v1/upload_files"  -H "${auth_hdr}" -H "${inst_hdr}" --header "Content-Type: multipart/form-data" \
-   --form data_type=package_sbom --form filename=@./generated/pyk8s-packages-2.0.1.json \
-   --form 'metadata={"repo_url" : "git@github.com:sriramsrinivasangmail/pyk8s.git" }'
+   --form 'metadata={"repo_url" : "git@github.com:sriramsrinivasangmail/pyk8s.git" }' \
+   --form data_type=package_sbom --form filename=@./generated/pyk8s-src-packages.json
    echo
 }
+
+push_pkg_sbom_for_img()
+{
+    echo === $0 ====
+
+    $DRY_RUN ${CURL} --request POST --url "${concert_url}/ingestion/api/v1/upload_files"  -H "${auth_hdr}" -H "${inst_hdr}" --header "Content-Type: multipart/form-data" \
+   --form data_type=package_sbom --form filename=@./generated/pyk8s-img-packages.json
+   echo
+}
+
+
 
 push_build_sbom()
 {
@@ -39,9 +50,23 @@ push_build_sbom()
    echo
 }
 
+push_vdr_for_src()
+{
+    echo === $0 ====
 
-#push_app_sbom
-#push_pkg_sbom
-#push_build_sbom
+    $DRY_RUN ${CURL} --request POST --url "${concert_url}/ingestion/api/v1/upload_files"  -H "${auth_hdr}" -H "${inst_hdr}" --header "Content-Type: multipart/form-data" \
+   --form data_type=code_scan --form filename=@./generated/pyk8s-vuln-src.json \
+   --form 'metadata={"repo_url" : "git@github.com:sriramsrinivasangmail/pyk8s.git" }'
+   echo
+}
+
+push_vdr_for_img()
+{
+    echo === $0 ====
+
+    $DRY_RUN ${CURL} --request POST --url "${concert_url}/ingestion/api/v1/upload_files"  -H "${auth_hdr}" -H "${inst_hdr}" --header "Content-Type: multipart/form-data" \
+   --form data_type=image_scan --form filename=@./generated/pyk8s-vuln-images.json
+   echo
+}
 
 $*

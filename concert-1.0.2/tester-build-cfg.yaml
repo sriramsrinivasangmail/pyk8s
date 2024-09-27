@@ -4,15 +4,15 @@ concert:
   - component_name: "pyk8s"
     output_file: "pyk8s-build.json"
     app_name: "tester"
-    number: "v2.0.1-84-20240410-200742"
+    number: "v2.0.1-88-20240710-200742"
     version: "2.0.1"
     image:
       name: "myregistry:5000/sector7g/pyk8s"
       version: "2.0.1"
       tag: "v2"
-      digest: "sha256:a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
+      digest: "sha256:pp65a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
     repositories:
       - name: "pyk8s"
         url: "git@github.com:sriramsrinivasangmail/pyk8s.git"
         branch: "main"
-        commit_sha: "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+        commit_sha: "pp7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"

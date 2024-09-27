@@ -15,11 +15,6 @@ concert:
     components:
     - component_name: "pyk8s"
       version: "2.0.1"
-      repository:
-        name: "pyk8s"
-        url: "git@github.com:sriramsrinivasangmail/pyk8s.git"
-      image:
-        name: "myregistry:5000/sector7g/pyk8s"
     environment_targets:
     - name: "dev"
     services:

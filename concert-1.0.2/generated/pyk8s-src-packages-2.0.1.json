@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.5",
-  "serialNumber": "urn:uuid:9b9b941a-1c29-4f1f-bbb8-44a8200f09fd",
+  "serialNumber": "urn:uuid:03002df9-9ff4-4b2f-b671-72bd5875a29f",
   "version": 1,
   "metadata": {
-    "timestamp": "2024-09-26T19:25:48Z",
+    "timestamp": "2024-09-27T02:04:59Z",
     "tools": {
       "components": [
         {
@@ -32,7 +32,7 @@
     "component": {
       "group": "",
       "name": "pyk8s",
-      "version": "latest",
+      "version": "2.0.1",
       "type": "application",
       "bom-ref": "pkg:gem/pyk8s@latest",
       "purl": "pkg:gem/pyk8s@latest"
@@ -60,7 +60,7 @@
             {
               "technique": "instrumentation",
               "confidence": 1,
-              "value": "/tmp/cdxgen-venv-bAkUXw"
+              "value": "/tmp/cdxgen-venv-WKfthE"
             }
           ]
         }
@@ -114,7 +114,7 @@
             {
               "technique": "instrumentation",
               "confidence": 1,
-              "value": "/tmp/cdxgen-venv-bAkUXw"
+              "value": "/tmp/cdxgen-venv-WKfthE"
             }
           ]
         }
@@ -141,7 +141,7 @@
             {
               "technique": "instrumentation",
               "confidence": 1,
-              "value": "/tmp/cdxgen-venv-bAkUXw"
+              "value": "/tmp/cdxgen-venv-WKfthE"
             }
           ]
         }
@@ -168,7 +168,7 @@
             {
               "technique": "instrumentation",
               "confidence": 1,
-              "value": "/tmp/cdxgen-venv-bAkUXw"
+              "value": "/tmp/cdxgen-venv-WKfthE"
             }
           ]
         }
@@ -195,34 +195,7 @@
             {
               "technique": "instrumentation",
               "confidence": 1,
-              "value": "/tmp/cdxgen-venv-bAkUXw"
-            }
-          ]
-        }
-      },
-      "properties": [
-        {
-          "name": "SrcFile",
-          "value": "/pyk8s/requirements.txt"
-        }
-      ]
-    },
-    {
-      "group": "",
-      "name": "click",
-      "version": "8.1.7",
-      "purl": "pkg:pypi/click@8.1.7",
-      "type": "library",
-      "bom-ref": "pkg:pypi/click@8.1.7",
-      "evidence": {
-        "identity": {
-          "field": "purl",
-          "confidence": 0.8,
-          "methods": [
-            {
-              "technique": "manifest-analysis",
-              "confidence": 0.8,
-              "value": "/pyk8s/requirements.txt"
+              "value": "/tmp/cdxgen-venv-WKfthE"
             }
           ]
         }
@@ -241,33 +214,6 @@
       "purl": "pkg:pypi/jinja2@3.1.2",
       "type": "library",
       "bom-ref": "pkg:pypi/jinja2@3.1.2",
-      "evidence": {
-        "identity": {
-          "field": "purl",
-          "confidence": 0.8,
-          "methods": [
-            {
-              "technique": "manifest-analysis",
-              "confidence": 0.8,
-              "value": "/pyk8s/requirements.txt"
-            }
-          ]
-        }
-      },
-      "properties": [
-        {
-          "name": "SrcFile",
-          "value": "/pyk8s/requirements.txt"
-        }
-      ]
-    },
-    {
-      "group": "",
-      "name": "blinker",
-      "version": "1.8.2",
-      "purl": "pkg:pypi/blinker@1.8.2",
-      "type": "library",
-      "bom-ref": "pkg:pypi/blinker@1.8.2",
       "evidence": {
         "identity": {
           "field": "purl",
@@ -317,6 +263,60 @@
     },
     {
       "group": "",
+      "name": "click",
+      "version": "8.1.7",
+      "purl": "pkg:pypi/click@8.1.7",
+      "type": "library",
+      "bom-ref": "pkg:pypi/click@8.1.7",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/pyk8s/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/pyk8s/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "blinker",
+      "version": "1.8.2",
+      "purl": "pkg:pypi/blinker@1.8.2",
+      "type": "library",
+      "bom-ref": "pkg:pypi/blinker@1.8.2",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/pyk8s/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/pyk8s/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
       "name": "filelock",
       "version": "3.6.0",
       "purl": "pkg:pypi/filelock@3.6.0",
@@ -330,7 +330,7 @@
             {
               "technique": "instrumentation",
               "confidence": 1,
-              "value": "/tmp/cdxgen-venv-bAkUXw"
+              "value": "/tmp/cdxgen-venv-WKfthE"
             }
           ]
         }
@@ -357,7 +357,7 @@
             {
               "technique": "instrumentation",
               "confidence": 1,
-              "value": "/tmp/cdxgen-venv-bAkUXw"
+              "value": "/tmp/cdxgen-venv-WKfthE"
             }
           ]
         }
@@ -438,7 +438,7 @@
             {
               "technique": "instrumentation",
               "confidence": 1,
-              "value": "/tmp/cdxgen-venv-bAkUXw"
+              "value": "/tmp/cdxgen-venv-WKfthE"
             }
           ]
         }
@@ -480,21 +480,21 @@
       "dependsOn": []
     },
     {
-      "ref": "pkg:pypi/click@8.1.7",
-      "dependsOn": []
-    },
-    {
       "ref": "pkg:pypi/jinja2@3.1.2",
       "dependsOn": [
         "pkg:pypi/markupsafe@2.1.5"
       ]
     },
     {
-      "ref": "pkg:pypi/blinker@1.8.2",
+      "ref": "pkg:pypi/itsdangerous@2.2.0",
       "dependsOn": []
     },
     {
-      "ref": "pkg:pypi/itsdangerous@2.2.0",
+      "ref": "pkg:pypi/click@8.1.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/blinker@1.8.2",
       "dependsOn": []
     },
     {
