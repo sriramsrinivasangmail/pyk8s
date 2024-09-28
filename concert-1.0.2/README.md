@@ -6,12 +6,12 @@
 - [Example data ingest with Concert v1.0.2](#example-data-ingest-with-concert-v102)
   - [Introduction](#introduction)
     - [Utility scripts](#utility-scripts)
-  - [Terminology](#terminology)
-    - [The Application entity](#the-application-entity)
-    - [The Environment entity](#the-environment-entity)
+    - [Terminology](#terminology)
+      - [The Application entity](#the-application-entity)
+      - [The Environment entity](#the-environment-entity)
     - [Software Bill of Materials (SBOM) for the App360 view](#software-bill-of-materials-sbom-for-the-app360-view)
-  - [Data ingestion types](#data-ingestion-types)
-  - [Generating ConcertDef \& CycloneDX files](#generating-concertdef--cyclonedx-files)
+    - [Data ingestion types](#data-ingestion-types)
+  - [Generating ConcertDef and CycloneDX files](#generating-concertdef-and-cyclonedx-files)
     - [Generate the App SBOM](#generate-the-app-sbom)
     - [Generate the Build SBOM](#generate-the-build-sbom)
     - [Generate the inventory of Packages from source code](#generate-the-inventory-of-packages-from-source-code)
@@ -56,25 +56,31 @@ docker tag pyk8s:v1 myregistry:5000/sector7g/pyk8s:v2
 
 **A note on vulnerabilities in the example**: the python [requirements.txt](../requirements.txt) file includes specific older versions of packages known to have vulnerabilities just to illustrate how vulnerabilities from source code is identified & processed by Concert.  Similarly, the [Dockerfile](../Dockerfile) refers to an older base image that is known to have vulnerabilities. 
 
----
 
-##  Terminology
+###  Terminology
 
-### The Application entity
+#### The Application entity
 
 An Application is defined to include references to:
+
 •	Source code repositories
+
 •	Packages used in that Application
+
 •	Images (such as Docker images) and other binaries that get deployed for that Application
+
 •	Environments where the Application gets deployed
+
 •	Access Points (such as API services etc.) 
 
-### The Environment entity
+#### The Environment entity
 
 An Environment is defined to include references to:
 
 •	Applications it hosts
+
 •	Access points that it exposes – either private (within a specific network domain) or public (accessible outside the domain)
+
 •	Resources  - these could be Nodes (machines),  Deployments/Pods etc. (inside Kubernetes) that are present inside that environment
 
 ### Software Bill of Materials (SBOM) for the App360 view
@@ -89,7 +95,7 @@ https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf 
 
 - IBM Concert uses the CycloneDX standard to ingest SBOMs as well as extends it for the 'ConcertDef' format for additional information and relationships. To understand more about the ConcertDef format, see [the documentation around ConcertDef](https://www.ibm.com/docs/en/concert?topic=topology-generating-concert-defined-sbom)
 
-## Data ingestion types
+### Data ingestion types
 
 1) **Application SBOM**:  (ConcertDef format)
 
@@ -116,7 +122,7 @@ The VDR itemizes the lists of vulnerabilities found in scanning the source code 
 
 ---
 
-## Generating ConcertDef & CycloneDX files
+## Generating ConcertDef and CycloneDX files
 
 While there are multiple techniques for generating such content, in this example, we will use a set of common open source utilities as well as the Concert toolkit to illustrate different ways to generate appropriate data prior to loading into Concert.
 
@@ -131,156 +137,153 @@ d) [trivy](https://github.com/aquasecurity/trivy) is used to scan the source cod
 
 e) [grype](https://github.com/anchore/grype) is used to scan the Docker image and produce the list of vulnerabilities in VDR format.
 
-
 ### Generate the App SBOM
 
-    To generate Application ConcertDef SBOMs easily, the [Concert toolkit](https://www.ibm.com/docs/en/concert?topic=started-using-concert-toolkit#using_the_concert_toolkit__title__3) includes a utility called ["app-sbom"](https://www.ibm.com/docs/en/concert?topic=toolkit-list-utilities#toolkit_utilities_list__title__7) that uses a simple .yaml file as input. 
+To generate Application ConcertDef SBOMs easily, the [Concert toolkit](https://www.ibm.com/docs/en/concert?topic=started-using-concert-toolkit#using_the_concert_toolkit__title__3) includes a utility called ["app-sbom"](https://www.ibm.com/docs/en/concert?topic=toolkit-list-utilities#toolkit_utilities_list__title__7) that uses a simple .yaml file as input. 
 
-    For this 'pyk8s' example, the [app-config yaml file](./tester-app-cfg.yaml) includes metadata about the App being onboarded. It also identifies the `environment_targets` to describe where the App has been or is being deployed. The example shows a set of API endpoints that are exposed by this app. 
+For this 'pyk8s' example, the [app-config yaml file](./tester-app-cfg.yaml) includes metadata about the App being onboarded. It also identifies the `environment_targets` to describe where the App has been or is being deployed. The example shows a set of API endpoints that are exposed by this app. 
 
-    To generate the App SBOM using the toolkit, run:
-     
-    `./toolkit.sh "app-sbom --app-config /toolkit-data/tester-app-cfg.yaml"`
+To generate the App SBOM using the toolkit, run:
+ 
+`./toolkit.sh "app-sbom --app-config /toolkit-data/tester-app-cfg.yaml"`
 
-    The output file [./generated/tester-app.json](./generated/tester-app.json) is the ConcertDef SBOM. 
+The output file [./generated/tester-app.json](./generated/tester-app.json) is the ConcertDef SBOM. 
 
 
-    ### Generate the Build SBOM
+### Generate the Build SBOM
 
-    Similarly, for the build SBOM, the [build-sbom utility](https://www.ibm.com/docs/en/concert?topic=toolkit-list-utilities#toolkit_utilities_list__title__5) can be used.
+Similarly, for the build SBOM, the [build-sbom utility](https://www.ibm.com/docs/en/concert?topic=toolkit-list-utilities#toolkit_utilities_list__title__5) can be used.
 
-    [tester-build-cfg.yaml](./tester-build-cfg.yaml) is an example yaml file for the 'pyk8s' application.  It identifies the build number to identify the build as well as git repository branches and commit sha.
+[tester-build-cfg.yaml](./tester-build-cfg.yaml) is an example yaml file for the 'pyk8s' application.  It identifies the build number to identify the build as well as git repository branches and commit sha.
 
-    `./toolkit.sh build-sbom --build-config /pyk8s/concert-1.0.2/tester-build-cfg.yaml`
+`./toolkit.sh build-sbom --build-config /pyk8s/concert-1.0.2/tester-build-cfg.yaml`
 
-    The output file [./generated/pyk8s-build.json](./generated/pyk8s-build.json) is the generated ConcertDef SBOM. 
+The output file [./generated/pyk8s-build.json](./generated/pyk8s-build.json) is the generated ConcertDef SBOM. 
 
-    ### Generate the inventory of Packages from source code 
+### Generate the inventory of Packages from source code 
 
-    The toolkit [code-scan](https://www.ibm.com/docs/en/concert?topic=toolkit-list-utilities#toolkit_utilities_list__title__2) utility invokes cdxgen to generate the inventory of packages from the source code in CycloneDX format.
-      
-    `./toolkit.sh code-scan --src /pyk8s --output-file pyk8s-src-packages.json`
+The toolkit [code-scan](https://www.ibm.com/docs/en/concert?topic=toolkit-list-utilities#toolkit_utilities_list__title__2) utility invokes cdxgen to generate the inventory of packages from the source code in CycloneDX format.
+  
+`./toolkit.sh code-scan --src /pyk8s --output-file pyk8s-src-packages.json`
 
-    The CycloneDX file [pyk8s-src-packages.json](./generated/pyk8s-src-packages.json) is the result of the cdxgen run.
+The CycloneDX file [pyk8s-src-packages.json](./generated/pyk8s-src-packages.json) is the result of the cdxgen run.
 
-    ### Generate the inventory of Packages from the docker image
+### Generate the inventory of Packages from the docker image
 
-    Use the syft utility to generate a CycloneDX SBOM inventory of packages found in the Docker image.
+Use the syft utility to generate a CycloneDX SBOM inventory of packages found in the Docker image.
 
-    `syft myregistry:5000/sector7g/pyk8s:v2 -o cyclonedx-json > generated/pyk8s-img-packages.json`
+`syft myregistry:5000/sector7g/pyk8s:v2 -o cyclonedx-json > generated/pyk8s-img-packages.json`
 
-    The [./generated/pyk8s-img-packages.json](./generated/pyk8s-img-packages.json) is generated.
+The [./generated/pyk8s-img-packages.json](./generated/pyk8s-img-packages.json) is generated.
 
-    ### Generate a VDR from the source code
+### Generate a VDR from the source code
 
-    Use the trivy utility to scan and generate a list of vulnerabilities found in the source code.
+Use the trivy utility to scan and generate a list of vulnerabilities found in the source code.
 
-    `(cd ../../; trivy fs --output=./pyk8s/concert-1.0.2/generated/pyk8s-vuln-src.json --format=cyclonedx --scanners vuln ./pyk8s/)`
+`(cd ../../; trivy fs --output=./pyk8s/concert-1.0.2/generated/pyk8s-vuln-src.json --format=cyclonedx --scanners vuln ./pyk8s/)`
 
-    The [./generated/pyk8s-vuln-src.json](./generated/pyk8s-vuln-src.json) file is the VDR in CycloneDX format.
+The [./generated/pyk8s-vuln-src.json](./generated/pyk8s-vuln-src.json) file is the VDR in CycloneDX format.
 
-    ### Generate a VDR from the docker image
+### Generate a VDR from the docker image
 
-    We will use grype to scan the docker image and generate the list of vulnerabilities.
+We will use grype to scan the docker image and generate the list of vulnerabilities.
 
-    `grype myregistry:5000/sector7g/pyk8s:v2 -o cyclonedx-json > generated/pyk8s-vuln-images.json` 
+`grype myregistry:5000/sector7g/pyk8s:v2 -o cyclonedx-json > generated/pyk8s-vuln-images.json` 
 
-    The [./generated/](./generated/pyk8s-vuln-images.json) is the VDR in CycloneDX format.
+The [./generated/](./generated/pyk8s-vuln-images.json) is the VDR in CycloneDX format.
 
 
-    ---
+---
 
 
-    ## Ingestion 
+## Ingestion 
 
-    In this section, we will push the generated data files to Concert using one of Concert's [ingestion endpoint](https://www.ibm.com/docs/en/concert?topic=concert-importing-data-using-api#ingesting_data_via_api__title__3) using the helper functions in 
-    [push.sh](./push.sh).
+In this section, we will push the generated data files to Concert using one of Concert's [ingestion endpoint](https://www.ibm.com/docs/en/concert?topic=concert-importing-data-using-api#ingesting_data_via_api__title__3) using the helper functions in 
+[push.sh](./push.sh).
 
-    Remember to change the script and set the coordinates including the API Key to connect to your Concert instance.
+Remember to change the script and set the coordinates including the API Key to connect to your Concert instance.
 
-    See [Generating an API key](https://www.ibm.com/docs/en/concert?topic=api-generating-key) for instructions on generating your API Key.
+See [Generating an API key](https://www.ibm.com/docs/en/concert?topic=api-generating-key) for instructions on generating your API Key.
 
-    for example:
+for example:
 
-    ```
-    export CONCERT_URL="https://myconcert.example.com:<port>"
-    export CONCERT_API_KEY="C_API_KEY <key>"
-    ```
+```
+export CONCERT_URL="https://myconcert.example.com:<port>"
+export CONCERT_API_KEY="C_API_KEY <key>"
+```
 
-    You may also need to change the `InstanceId: ` header in the script to point to your specific instance as needed.
+You may also need to change the `InstanceId: ` header in the script to point to your specific instance as needed.
 
-    We will now look at how to upload each generated file into your Concert instance. The videos provide an idea of how these entities will be represented inside Concer.
+We will now look at how to upload each generated file into your Concert instance. The videos provide an idea of how these entities will be represented inside Concer.
 
-    **Note**: After a load, you may need to **reload** the browser page to get the latest data to show up.
+**Note**: After a load, you may need to **reload** the browser page to get the latest data to show up.
 
-    ### upload the App ConcertDef SBOM
+### upload the App ConcertDef SBOM
 
-    `./push.sh push_app_sbom`
+`./push.sh push_app_sbom`
 
-    Concert should now show this one application and one environment.
+Concert should now show this one application and one environment.
 
-    <video width="768" height="512" controls>
-      <source src="media/app_sbom.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
+<video width="768" height="512" controls>
+  <source src="media/app_sbom.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
-    ### upload the Build SBOM
+### upload the Build SBOM
 
-    `./push.sh push_build_sbom`
+`./push.sh push_build_sbom`
 
-    You should see the image and source code referenced in the Build SBOM now
+You should see the image and source code referenced in the Build SBOM now
 
-    <video width="768" height="512" controls>
-      <source src="media/build_sbom.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
+<video width="768" height="512" controls>
+  <source src="media/build_sbom.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 
-    ### upload the CycloneDX inventory of packages from source code
+### upload the CycloneDX inventory of packages from source code
 
-    `./push.sh push_pkg_sbom_for_src`
+`./push.sh push_pkg_sbom_for_src`
 
-    - **NOTE** the use of the `repo_url` metadata parameter in the [curl command](./push.sh#L28) to indicate that the generated CycloneDX content is for the same source code repository specified in the [Build SBOM](./generated/pyk8s-build.json#L26). If you specify a repository url in App SBOM)too, it should be the same identifier used everywhere.  This is because the [generated CycloneDX content](./generated/pyk8s-src-packages.json#L38) usually does not include a unique identifier about the source repository that was scanned. In many cases, just a subdirectory name may be used as a reference, which could also be the same name used in other repositories. The `version` tag may not match what you might expect either. 
+- **NOTE** the use of the `repo_url` metadata parameter in the [curl command](./push.sh#L28) to indicate that the generated CycloneDX content is for the same source code repository specified in the [Build SBOM](./generated/pyk8s-build.json#L26). If you specify a repository url in App SBOM)too, it should be the same identifier used everywhere.  This is because the [generated CycloneDX content](./generated/pyk8s-src-packages.json#L38) usually does not include a unique identifier about the source repository that was scanned. In many cases, just a subdirectory name may be used as a reference, which could also be the same name used in other repositories. The `version` tag may not match what you might expect either. 
 
-    <video width="768" height="512" controls>
-      <source src="media/pkgs_from_src_repo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
+<video width="768" height="512" controls>
+  <source src="media/pkgs_from_src_repo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 
-    ### upload the CycloneDX inventory of packages found in the image
+### upload the CycloneDX inventory of packages found in the image
 
-    `./push.sh push_pkg_sbom_for_img`
+`./push.sh push_pkg_sbom_for_img`
 
-    It is not necessary to provide the `repo_url` metadata parameter in this case because the generated CycloneDX content is able to uniquely identify the image that the scan was run against, with a 'type' set to 'container' as well.
+It is not necessary to provide the `repo_url` metadata parameter in this case because the generated CycloneDX content is able to uniquely identify the image that the scan was run against, with a 'type' set to 'container' as well.
 
-    You should see packages now visible and associated with the Application.
+You should see packages now visible and associated with the Application.
 
-    <video width="768" height="512" controls>
-      <source src="media/pkgs_from_img_scan.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
+<video width="768" height="512" controls>
+  <source src="media/pkgs_from_img_scan.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 
+### upload the VDR from source code scan
 
+`./push.sh push_vdr_for_src`
 
-    ### upload the VDR from source code scan
+**NOTE** the use of the `repo_url` metadata parameter in the [curl command](./push.sh#L59)
 
-    `./push.sh push_vdr_for_src`
+Once the upload completes, you should be able to see the vulnerabilities listed in the Dimension page as well as associated with the Application. 
 
-    **NOTE** the use of the `repo_url` metadata parameter in the [curl command](./push.sh#L59)
+<video width="768" height="512" controls>
+  <source src="media/vdr_from_src_repo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
-    Once the upload completes, you should be able to see the vulnerabilities listed in the Dimension page as well as associated with the Application. 
 
-    <video width="768" height="512" controls>
-      <source src="media/vdr_from_src_repo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
+### upload the VDR from image scan
 
-
-    ### upload the VDR from image scan
-
-    `./push.sh push_vdr_for_img`
+`./push.sh push_vdr_for_img`
 
 The uploaded list of vulnerabilities should show up in the Dimensions view and associated with the Application as well.
 
