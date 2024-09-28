@@ -224,10 +224,10 @@ We will now look at how to upload each generated file into your Concert instance
 
 Concert should now show this one application and one environment.
 
-<video width="768" height="512" controls>
-  <source src="media/app_sbom.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+
+https://github.com/user-attachments/assets/d6a95705-3b37-4f76-b62a-5652f8464afc
+
+
 
 ### upload the Build SBOM
 
@@ -235,10 +235,11 @@ Your browser does not support the video tag.
 
 You should see the image and source code referenced in the Build SBOM now
 
-<video width="768" height="512" controls>
-  <source src="media/build_sbom.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+
+
+https://github.com/user-attachments/assets/4f8e1daf-06e8-496d-9418-84a5161a627e
+
+
 
 
 ### upload the CycloneDX inventory of packages from source code
@@ -247,10 +248,10 @@ Your browser does not support the video tag.
 
 - **NOTE** the use of the `repo_url` metadata parameter in the [curl command](./push.sh#L28) to indicate that the generated CycloneDX content is for the same source code repository specified in the [Build SBOM](./generated/pyk8s-build.json#L26). If you specify a repository url in App SBOM)too, it should be the same identifier used everywhere.  This is because the [generated CycloneDX content](./generated/pyk8s-src-packages.json#L38) usually does not include a unique identifier about the source repository that was scanned. In many cases, just a subdirectory name may be used as a reference, which could also be the same name used in other repositories. The `version` tag may not match what you might expect either. 
 
-<video width="768" height="512" controls>
-  <source src="media/pkgs_from_src_repo.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+
+
+https://github.com/user-attachments/assets/140b4c4a-2bad-4d8d-bdba-8c9d75a39402
+
 
 
 ### upload the CycloneDX inventory of packages found in the image
@@ -261,10 +262,10 @@ It is not necessary to provide the `repo_url` metadata parameter in this case be
 
 You should see packages now visible and associated with the Application.
 
-<video width="768" height="512" controls>
-  <source src="media/pkgs_from_img_scan.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+
+
+https://github.com/user-attachments/assets/293bc315-e38c-483b-ab9a-ef550d291ebd
+
 
 
 ### upload the VDR from source code scan
@@ -275,10 +276,10 @@ Your browser does not support the video tag.
 
 Once the upload completes, you should be able to see the vulnerabilities listed in the Dimension page as well as associated with the Application. 
 
-<video width="768" height="512" controls>
-  <source src="media/vdr_from_src_repo.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+
+
+https://github.com/user-attachments/assets/95a94cf4-6817-466e-858f-4d7e860ee5e4
+
 
 
 ### upload the VDR from image scan
@@ -287,8 +288,8 @@ Your browser does not support the video tag.
 
 The uploaded list of vulnerabilities should show up in the Dimensions view and associated with the Application as well.
 
-<video width="768" height="512" controls>
-  <source src="media/vdr_from_image.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+
+https://github.com/user-attachments/assets/713ad741-2931-4fc5-950a-6506aca21fba
+
+
 
