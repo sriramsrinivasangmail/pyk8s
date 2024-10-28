@@ -20,6 +20,16 @@ push_app_sbom()
    echo
 }
 
+push_deploy_sbom()
+{
+    echo === $0 ====
+
+    $DRY_RUN ${CURL} --request POST --url "${concert_url}/ingestion/api/v1/upload_files"  -H "${auth_hdr}" -H "${inst_hdr}" --header "Content-Type: multipart/form-data" \
+   --form data_type=application_sbom --form filename=@./generated/tester-deploy.json
+
+   echo
+}
+
 push_pkg_sbom_for_src()
 {
     echo === $0 ====
