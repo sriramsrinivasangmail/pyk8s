@@ -1,6 +1,5 @@
 #  Example data ingest with Concert v1.0.2
 
-
 ---
 
 - [Example data ingest with Concert v1.0.2](#example-data-ingest-with-concert-v102)
@@ -212,6 +211,7 @@ export CONCERT_URL="https://myconcert.example.com:<port>"
 export CONCERT_API_KEY="C_API_KEY <key>"
 ```
 
+<<<<<<< HEAD
 You may also need to change the `InstanceId: ` header in the script to point to your specific instance as needed.
 
 We will now look at how to upload each generated file into your Concert instance. The videos provide an idea of how these entities will be represented inside Concer.
@@ -290,6 +290,4 @@ The uploaded list of vulnerabilities should show up in the Dimensions view and a
 
 
 https://github.com/user-attachments/assets/713ad741-2931-4fc5-950a-6506aca21fba
-
-
 
