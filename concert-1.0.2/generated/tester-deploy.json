@@ -1,0 +1,62 @@
+{
+    "bomFormat": "ConcertDef",
+    "specVersion": "1.0.2",
+    "metadata": {
+        "timestamp": "2024-10-29T05:52:32Z",
+        "type": "deploy",
+        "environment": "dev",
+        "component": {
+            "name": "pyk8s",
+            "version": "2.0.1",
+            "deploy-number": "69"
+        }
+    },
+    "runtime-components": [
+        {
+            "bom-ref": "service:vm:rhel-vm-1",
+            "name": "rhel-vm-1",
+            "type": "vm",
+            "hostname": "vm-92x.rhel.internal.company.com",
+            "properties": [
+                {
+                    "name": "os",
+                    "value": "RHEL"
+                },
+                {
+                    "name": "version",
+                    "value": "9.4"
+                }
+            ],
+            "components": [
+                {
+                    "bom-ref": "container:myregistry:5000/sector7g/pyk8s",
+                    "type": "container",
+                    "name": "myregistry:5000/sector7g/pyk8s",
+                    "tag": "v2",
+                    "digest": "sha256:4f326f7b9e42603ad46e867aea866e02604b0abed3eb8ade148ffc1aab96962e",
+                    "uri": "myregistry:5000/sector7g/pyk8s:v2@sha256:4f326f7b9e42603ad46e867aea866e02604b0abed3eb8ade148ffc1aab96962e"
+                }
+            ]
+        }
+    ],
+    "services": [
+        {
+            "bom-ref": "appapi:echo_access",
+            "name": "echo_access",
+            "properties": [
+                {
+                    "name": "base_url",
+                    "value": "https://sample.int.example.com/int_echo"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "container:myregistry:5000/sector7g/pyk8s",
+            "dependsOn": [
+                "appapi:echo_access"
+            ]
+        }
+    ]
+}
