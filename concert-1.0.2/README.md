@@ -292,4 +292,11 @@ The uploaded list of vulnerabilities should show up in the Dimensions view and a
 https://github.com/user-attachments/assets/713ad741-2931-4fc5-950a-6506aca21fba
 
 
+## Tips
+
+### Using ConcertDef Schema to validate JSON
+
+
+https://github.com/user-attachments/assets/4f010df2-d0b9-4dd2-963d-bd47ba360951
+
 
