@@ -300,3 +300,11 @@ https://github.com/user-attachments/assets/713ad741-2931-4fc5-950a-6506aca21fba
 https://github.com/user-attachments/assets/4f010df2-d0b9-4dd2-963d-bd47ba360951
 
 
+---
+
+# Introduction to the Software Composition Analytics feature
+
+
+
+https://github.com/user-attachments/assets/fe0c8842-f65b-462b-81f2-5b480b8baf1d
+
